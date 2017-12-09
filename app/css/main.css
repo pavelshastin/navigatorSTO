@@ -1,0 +1,223 @@
+@font-face {
+  font-family: "Myriad Reg";
+  src: url("../../fonts/MyriadPro-Regular.otf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Myriad Bold";
+  src: url("../../fonts/MyriadPro-Bold.otf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Myriad BoldCond";
+  src: url("../../fonts/MyriadPro-BoldCond.otf");
+  font-weight: normal;
+  font-style: normal; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  font-family: "Myriad Reg";
+  font-size: 19px; }
+
+a, a:active, a:visited, a:hover {
+  text-decoration: none; }
+
+.wrapper {
+  max-width: 1280px; }
+
+.container {
+  max-width: 1280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.header {
+  border-bottom: 1px solid black;
+  width: 100%;
+  margin-bottom: 42px; }
+
+.info {
+  position: relative;
+  width: 100%;
+  padding-bottom: 40px;
+  height: 719px; }
+
+.info:after {
+  content: "";
+  position: absolute;
+  background: url("../images/Navigator-STO-header.jpg") 0 0 no-repeat;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%; }
+
+.info_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1023px;
+  height: 100%;
+  margin: 0 auto; }
+
+.info__menu {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 19px;
+  line-height: 19px;
+  color: #ffffff; }
+  .info__menu a:visited {
+    color: #ffffff; }
+  .info__menu .info__menu_tol a {
+    color: #fbca0b; }
+  .info__menu .info__menu_sysr a {
+    color: #fbca0b; }
+
+.info__menu li {
+  padding: 40px 0;
+  margin-right: 32px; }
+  .info__menu li:last-child {
+    margin-right: 0px; }
+  .info__menu li.info__menu_tol {
+    margin-left: auto; }
+
+.info__headers_avtoset {
+  font-family: "Myriad Bold";
+  font-size: 49px;
+  line-height: 49px;
+  color: #fbca0b;
+  margin: 0;
+  margin-bottom: 13px; }
+
+.info__headers_navigat {
+  font-family: "Myriad Bold";
+  letter-spacing: 1px;
+  font-size: 62px;
+  line-height: 62px;
+  color: #fbca0b;
+  margin: 0;
+  margin-bottom: 32px; }
+
+.info__headers_eurorus {
+  font-size: 32px;
+  line-height: 32px;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 42px; }
+
+.info__advant {
+  width: 770px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 50px; }
+  .info__advant div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 137px;
+    width: 150px;
+    background: rgba(255, 255, 255, 0.5); }
+  .info__advant svg {
+    width: 100%;
+    height: 50%; }
+  .info__advant a {
+    display: block;
+    padding: 0 7%;
+    text-align: center;
+    line-height: 1.2; }
+  .info__advant a:visited {
+    color: #fbca0b; }
+  .info__advant .info__advant_guarantee a {
+    margin-bottom: 20px; }
+
+.info__buttons a.info_buttons_enroll {
+  display: block;
+  height: 60px;
+  padding: 20px 29px 23px 29px;
+  font-size: 24px;
+  color: #263236;
+  background-color: #fbca0b;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 1px 2px 0px #f15a24;
+          box-shadow: 0px 1px 2px 0px #f15a24;
+  letter-spacing: 1px; }
+
+a.down_button {
+  width: 0;
+  border: 12px solid transparent;
+  border-bottom: none;
+  border-top-color: #fbca0b;
+  margin-top: auto; }

@@ -1,0 +1,18 @@
+$contWidth: 1023px;
+
+
+$yellow: #fbca0b;
+$white: #ffffff;
+$grey: #263236;
+
+
+
+
+@mixin flex($direct, $wrap, $justify, $align) {
+	display: flex;
+	flex-direction: $direct;
+	flex-wrap: $wrap;
+	justify-content: $justify;
+	align-items: $align;
+
+}

@@ -1,0 +1,52 @@
+//@import "./normalize.css";
+@import "./includes/_fonts.scss";
+@import "./includes/_mixins.scss";
+
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	font-family: "Myriad Reg";
+	font-size: 19px;
+
+}
+
+a, a:active, a:visited, a:hover {
+	text-decoration: none;
+}
+
+.wrapper {
+	max-width: 1280px;
+}
+
+
+
+.container {
+	max-width: 1280px;
+	
+	@include flex(column, nowrap, flex-start, center)
+
+}
+	
+
+
+
+
+
+
+
+
+
+
+@import "./includes/common_info.scss";
+@import "./includes/price.scss";
+@import "./includes/form.scss";
+@import "./includes/feedback.scss";
+@import "./includes/contacts.scss";
+	
+
+	
