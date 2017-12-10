@@ -1,0 +1,56 @@
+﻿.service
+	.service__container
+		.service__header_area
+			h3.service__header ЗАЯВКА НА РЕМОНТ И ОБСЛУЖИВАНИЕ В 
+			select(form="service_form").service__form_city
+				option ТОЛЬЯТТИ
+				option СЫЗРАНЬ
+		form(name="service__form" id="service__form" action="#" method="post").service__form
+			
+			.service__form_name
+				label(for="service__form_name") Представьтесь пожалуйста<span class="asterix">*</span> 
+				input(id="service__form_name" type="text" placeholder="Иванов Ив|"  required)
+			
+			.service__form_phone
+				label(for="service__form_phone") Телефон<span class="asterix">*</span> 
+				input(id="service__form_phone" type="text" placeholder="+7 999 666 99 66" required)
+			
+			.service__form_email
+				label(for="service__form_email") E-mail 
+				input(id="service__form_email" type="text" placeholder="example@mail.ru")			
+
+			.service__form_model
+				label(for="service__form_model") Марка автомобиля 
+				input(id="service__form_model" type="text" placeholder="Honda Civic")
+
+			.service__form_type
+				label(for="service__form_type") Вид сервиса 
+				select(id="service__form_type" placeholder="Система охлаждения")
+					option Техническое обслуживание
+					option(selected) Система охлаждения
+					option Шиномонтажные работы
+					option Геометрия подвески
+					option Подвеска, рулевое управление
+					option Тормозная система
+					option Аккумуляторы и свечи
+					option Генератор, стартер и ремни
+					option Оптика
+					option Система кондиционирования
+					option Трансмиссия
+					option Другое
+			
+			.service__form_date
+				label(for="service__form_date") Удобная дата и время обслуживания<span class="asterix">*</span> 
+				input(id="service__form_date" type="text" placeholder="22.05.2018 в 18:00" required)
+			
+			.service__form_proposal
+				label(for="service__form_proposal") Дополнительные пожелания 
+				textarea(id="service__form_proposal" placeholder="Напишите дополнительные пожелания по обслуживанию")
+
+			.service__form_personal
+				label(for="service__form_personal") Согласен на обработку персональных данных 
+				input(type="checkbox" id="service__form_personal")
+
+		.service__buttons
+			input(type="submit" form="service_form" value="ЗАПИСАТЬСЯ").service__buttons_enroll 
+				

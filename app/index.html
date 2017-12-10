@@ -138,9 +138,70 @@
 								<div class="why__img_arrow_right"><a href="#" class="arrow_right"></a></div>
 							</div><img src="./images/Navigator-STO-page-why.jpg" id="img_1" alt="ПОЧЕМУ ВЫБИРАЮТ АВТОСЕРВИСЫ &quot;НАВИГАТОР&quot;"/>
 						</div>
-						<div class="why__img_container_buttons"> <a href=""></a><a href=""></a><a href=""></a><a href=""></a><a href=""></a></div>
+						<div class="why__img_container_buttons"> <a href="" class="active"></a><a href=""></a><a href=""></a><a href=""></a><a href=""></a></div>
 					</div>
 					<div class="why__buttons"><a src="#" class="why__buttons_enroll">ЗАПИСАТЬСЯ</a></div>
+				</div>
+			</div>
+			<div class="service">
+				<div class="service__container">
+					<div class="service__header_area">
+						<h3 class="service__header">ЗАЯВКА НА РЕМОНТ И ОБСЛУЖИВАНИЕ В </h3>
+						<select form="service_form" class="service__form_city">
+							<option>ТОЛЬЯТТИ</option>
+							<option>СЫЗРАНЬ</option>
+						</select>
+					</div>
+					<form name="service__form" id="service__form" action="#" method="post" class="service__form">
+						<div class="service__form_name">
+							<label for="service__form_name">Представьтесь пожалуйста<span class="asterix">*</span> </label>
+							<input id="service__form_name" type="text" placeholder="Иванов Ив|" required="required"/>
+						</div>
+						<div class="service__form_phone">
+							<label for="service__form_phone">Телефон<span class="asterix">*</span> </label>
+							<input id="service__form_phone" type="text" placeholder="+7 999 666 99 66" required="required"/>
+						</div>
+						<div class="service__form_email">
+							<label for="service__form_email">E-mail </label>
+							<input id="service__form_email" type="text" placeholder="example@mail.ru"/>
+						</div>
+						<div class="service__form_model">
+							<label for="service__form_model">Марка автомобиля </label>
+							<input id="service__form_model" type="text" placeholder="Honda Civic"/>
+						</div>
+						<div class="service__form_type">
+							<label for="service__form_type">Вид сервиса </label>
+							<select id="service__form_type" placeholder="Система охлаждения">
+								<option>Техническое обслуживание</option>
+								<option selected="selected">Система охлаждения</option>
+								<option>Шиномонтажные работы</option>
+								<option>Геометрия подвески</option>
+								<option>Подвеска, рулевое управление</option>
+								<option>Тормозная система</option>
+								<option>Аккумуляторы и свечи</option>
+								<option>Генератор, стартер и ремни</option>
+								<option>Оптика</option>
+								<option>Система кондиционирования</option>
+								<option>Трансмиссия</option>
+								<option>Другое</option>
+							</select>
+						</div>
+						<div class="service__form_date">
+							<label for="service__form_date">Удобная дата и время обслуживания<span class="asterix">*</span> </label>
+							<input id="service__form_date" type="text" placeholder="22.05.2018 в 18:00" required="required"/>
+						</div>
+						<div class="service__form_proposal">
+							<label for="service__form_proposal">Дополнительные пожелания </label>
+							<textarea id="service__form_proposal" placeholder="Напишите дополнительные пожелания по обслуживанию"></textarea>
+						</div>
+						<div class="service__form_personal">
+							<label for="service__form_personal">Согласен на обработку персональных данных </label>
+							<input type="checkbox" id="service__form_personal"/>
+						</div>
+					</form>
+					<div class="service__buttons">
+						<input type="submit" form="service_form" value="ЗАПИСАТЬСЯ" class="service__buttons_enroll"/>
+					</div>
 				</div>
 			</div>
 		</div>
