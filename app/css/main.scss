@@ -19,8 +19,12 @@ a, a:active, a:visited, a:hover {
 	text-decoration: none;
 }
 
+li {
+	list-style-type: none;
+}
+
 .wrapper {
-	max-width: 1280px;
+	width: 100%;
 }
 
 

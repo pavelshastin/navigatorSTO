@@ -1,0 +1,112 @@
+.price {
+	width: 100%;
+	background-color: #e5e6e7;
+	padding-bottom: 80px; //80px
+}
+
+.price_container {
+	width: $contWidth;
+	height: 1102px;
+	margin: 0 auto;
+
+}
+
+
+.price__header {
+	padding-top: 77px; //changed 80px
+	margin-bottom: 36px; //48px
+	font-size: 32px; //32px
+	color: $grey;
+	text-align: center;
+	letter-spacing: 4px; //2px
+}
+
+
+
+
+.price__list {
+	width: 100%;
+	@include flex(row, wrap, space-between, flex-start);
+	margin-bottom: 50px-32px; //48px
+
+	li {
+		width: 232px;
+		height: 232px;
+		border-radius: 10px;
+		background-color: black;
+		opacity: 0.5;
+		position: relative;
+		margin-bottom: 32px; //changed 32px
+		overflow: hidden;
+		@include flex(column, nowrap, center, center);
+
+	}
+
+	li .curtain {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+		background-size: cover;
+	}
+
+	// @for $i from 1 through 12 {
+	// 	.price__list_#{$i} .curtain {
+	// 		background: url("../images/Navigator-STO-page-#{$i}.jpg") 50% 50% no-repeat;
+	// 	}
+	// }
+
+	.item_inner_container {
+		width: 70px;
+		height: 114px;
+		@include flex(column, nowrap, flex-start, center);
+
+
+		svg {
+			width: 100%;
+			height: 100%;
+			margin-bottom: 24px; //24px
+		}
+
+		a, a:visited {
+			text-align: center;
+			font-size: 16px; //changed 16px
+			color: $yellow;
+			line-height: 1.4;
+		}
+
+
+		a:hover {
+			color: $greyLight;
+		}
+	}
+
+
+	
+
+
+
+}
+
+
+.price__buttons {
+	@include flex(column, nowrap, flex-start, center);
+
+	a.price__buttons_enroll {
+		font-family: "Myriad Bold";
+		display: block;
+		height: 60px;
+		padding: 20px 29px 23px 29px;
+		font-size: 24px; //changed 24px;
+		color: $grey;
+		background-color: $yellow;
+		border-radius: 8px;
+		box-shadow: 0px 1px 2px 0px #f15a24;
+		letter-spacing: 1px;
+	}
+
+}
