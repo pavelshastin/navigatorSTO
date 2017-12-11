@@ -1,18 +1,22 @@
 ﻿.service
 	.service__container
+		
 		.service__header_area
-			h3.service__header ЗАЯВКА НА РЕМОНТ И ОБСЛУЖИВАНИЕ В 
-			select(form="service_form").service__form_city
-				option ТОЛЬЯТТИ
-				option СЫЗРАНЬ
+			h3.service__header ЗАЯВКА НА РЕМОНТ И ОБСЛУЖИВАНИЕ В
+			.select_input
+				input(id="service__form_city" form="service_form" type="text" value="ТОЛЬЯТТИ").service__form_city
+				ul.service__form_city_items
+					li(id="service__form_city_tol") ТОЛЬЯТТИ
+					li(id="service__form_city_sysr") СЫЗРАНЬ
+		
 		form(name="service__form" id="service__form" action="#" method="post").service__form
 			
 			.service__form_name
-				label(for="service__form_name") Представьтесь пожалуйста<span class="asterix">*</span> 
+				label(for="service__form_name") Представьтесь пожалуйста <span class="asterix">*</span> 
 				input(id="service__form_name" type="text" placeholder="Иванов Ив|"  required)
 			
 			.service__form_phone
-				label(for="service__form_phone") Телефон<span class="asterix">*</span> 
+				label(for="service__form_phone") Телефон <span class="asterix">*</span> 
 				input(id="service__form_phone" type="text" placeholder="+7 999 666 99 66" required)
 			
 			.service__form_email
@@ -24,23 +28,38 @@
 				input(id="service__form_model" type="text" placeholder="Honda Civic")
 
 			.service__form_type
-				label(for="service__form_type") Вид сервиса 
-				select(id="service__form_type" placeholder="Система охлаждения")
-					option Техническое обслуживание
-					option(selected) Система охлаждения
-					option Шиномонтажные работы
-					option Геометрия подвески
-					option Подвеска, рулевое управление
-					option Тормозная система
-					option Аккумуляторы и свечи
-					option Генератор, стартер и ремни
-					option Оптика
-					option Система кондиционирования
-					option Трансмиссия
-					option Другое
+				label(for="service__form_type") Вид сервиса
+				.select_input 
+					input(id="service__form_model" type="text" placeholder="Система охлаждения")
+					ul.service__form_type_items
+						li(id="service__form_type_item-1") Техническое обслуживание
+						li(id="service__form_type_item-2") Система охлаждения
+						li(id="service__form_type_item-3") Шиномонтажные работы
+						li(id="service__form_type_item-4") Геометрия подвески
+						li(id="service__form_type_item-5") Подвеска, рулевое управление
+						li(id="service__form_type_item-6") Тормозная система
+						li(id="service__form_type_item-7") Аккумуляторы и свечи
+						li(id="service__form_type_item-8") Генератор, стартер и ремни
+						li(id="service__form_type_item-9") Оптика
+						li(id="service__form_type_item-10") Система кондиционирования
+						li(id="service__form_type_item-11") Трансмиссия
+						li(id="service__form_type_item-12") Другое
+				//- select(id="service__form_type" placeholder="Система охлаждения")
+				//- 	li(id="service__form_type_item-1") Техническое обслуживание
+				//- 	li(id="service__form_type_item-1")(selected) Система охлаждения
+				//- 	li(id="service__form_type_item-1") Шиномонтажные работы
+				//- 	li(id="service__form_type_item-1") Геометрия подвески
+				//- 	li(id="service__form_type_item-1") Подвеска, рулевое управление
+				//- 	li(id="service__form_type_item-1") Тормозная система
+				//- 	li(id="service__form_type_item-1") Аккумуляторы и свечи
+				//- 	li(id="service__form_type_item-1") Генератор, стартер и ремни
+				//- 	li(id="service__form_type_item-1") Оптика
+				//- 	li(id="service__form_type_item-1") Система кондиционирования
+				//- 	li(id="service__form_type_item-1") Трансмиссия
+				//- 	li(id="service__form_type_item-1") Другое
 			
 			.service__form_date
-				label(for="service__form_date") Удобная дата и время обслуживания<span class="asterix">*</span> 
+				label(for="service__form_date") Удобная дата и время обслуживания <span class="asterix">*</span> 
 				input(id="service__form_date" type="text" placeholder="22.05.2018 в 18:00" required)
 			
 			.service__form_proposal
@@ -48,9 +67,10 @@
 				textarea(id="service__form_proposal" placeholder="Напишите дополнительные пожелания по обслуживанию")
 
 			.service__form_personal
-				label(for="service__form_personal") Согласен на обработку персональных данных 
-				input(type="checkbox" id="service__form_personal")
+				label(for="service__form_personal")  
+				input(type="checkbox" id="service__form_personal" checked) 
+				.service__form_personal_inscr Согласен на обработку персональных данных	
 
 		.service__buttons
-			input(type="submit" form="service_form" value="ЗАПИСАТЬСЯ").service__buttons_enroll 
+			button(id="submit" form="service_form" ).service__buttons_enroll  ЗАПИСАТЬСЯ 
 				

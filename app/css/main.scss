@@ -37,8 +37,47 @@ li {
 }
 	
 
+$font: "Myriad Reg";
+$style: italic;
+$size: 16px;
+$color: #bbbbbb;
+$padding: 18px; 
 
 
+::-webkit-input-placeholder {
+	font-family: $font;
+	font-style: $style;
+	font-size: $size;
+	color: $color;
+	text-indent: $padding;
+}
+
+
+::-moz-placeholder {
+ 	font-family: $font;
+	font-style: $style;
+	font-size: $size;
+	color: $color;
+	text-indent: $padding;
+ }
+
+
+::-ms-placeholder {
+ 	font-family: $font;
+	font-style: $style;
+	font-size: $size;
+	color: $color;
+	text-indent: $padding;
+}
+
+
+::placeholder {
+	font-family: $font;
+	font-style: $style;
+	font-size: $size;
+	color: $color;
+	text-indent: $padding;
+}
 
 
 
