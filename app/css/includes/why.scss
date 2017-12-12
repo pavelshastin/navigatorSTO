@@ -56,7 +56,13 @@
 					border: 12px solid transparent;
 					border-right-color: $yellow;
 					border-left: none;
+
+					&:hover {
+						border-right-color: $grey;
 				}
+				}
+
+				
 			}
 
 			.why__img_arrow_right {
@@ -69,6 +75,10 @@
 					border: 12px solid transparent;
 					border-left-color: $yellow;
 					border-right: none;
+
+					&:hover {
+						border-left-color: $grey;
+					}
 				}
 			}
 

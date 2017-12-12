@@ -186,6 +186,11 @@ form.service__form {
 		letter-spacing: 1px;
 		margin: 0;
 		border: none;
+
+		&:focus, &:hover {
+			outline: none;
+				
+		}
 	}
 }
 
