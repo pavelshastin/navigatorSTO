@@ -608,6 +608,14 @@ a.down_button {
       -ms-flex-align: center;
           align-items: center; }
 
+.select_input {
+  position: relative; }
+  .select_input ul {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    z-index: 10; }
+
 .service__header_area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -684,7 +692,8 @@ form.service__form {
     width: 319px;
     height: 50px;
     border: 1px solid #e5e6e7;
-    border-radius: 10px; }
+    border-radius: 10px;
+    text-indent: 20px; }
     form.service__form input[type="text"]:focus, form.service__form input[type="text"]:hover {
       outline: none;
       border: 1px solid #fbca0b;
@@ -704,15 +713,16 @@ form.service__form {
       outline: none;
       border: 1px solid #e5e6e7;
       border-radius: 10px;
-      padding: 10px; }
+      padding: 20px;
+      text-indent: 20px; }
       form.service__form .service__form_proposal textarea:focus, form.service__form .service__form_proposal textarea:hover {
         outline: none;
         border: 1px solid #fbca0b;
         border-radius: 10px; }
-  form.service__form .service__form_type input:focus .service__form_type_items {
+  form.service__form .service__form_type input[type="text"]:focus ul.service__form_type_items {
     left: 0;
     opacity: 1; }
-  form.service__form .service__form_type .service__form_type_items {
+  form.service__form .service__form_type ul.service__form_type_items {
     top: 50px;
     opacity: 1; }
   form.service__form .service__form_personal {
@@ -744,14 +754,6 @@ form.service__form {
       font-family: "Myriad Reg";
       color: #263238; }
 
-.select_input {
-  overflow: hidden;
-  position: relative; }
-  .select_input ul {
-    position: absolute;
-    left: -9999px;
-    opacity: 0; }
-
 .asterix {
   color: red; }
 
@@ -769,3 +771,31 @@ form.service__form {
   letter-spacing: 1px;
   margin: 0;
   border: none; }
+
+.service__form_name input::-webkit-input-placeholder, .service__form_type input::-webkit-input-placeholder {
+  font-style: normal;
+  color: #263238; }
+
+.service__form_name input::-moz-placeholder, .service__form_type input::-moz-placeholder {
+  font-style: normal;
+  color: #263238; }
+
+.service__form_name input::-ms-placeholder, .service__form_type input::-ms-placeholder {
+  font-style: normal;
+  color: #263238; }
+
+.service__form_name input::-webkit-input-placeholder, .service__form_type input::-webkit-input-placeholder {
+  font-style: normal;
+  color: #263238; }
+
+.service__form_name input:-ms-input-placeholder, .service__form_type input:-ms-input-placeholder {
+  font-style: normal;
+  color: #263238; }
+
+.service__form_name input::-ms-input-placeholder, .service__form_type input::-ms-input-placeholder {
+  font-style: normal;
+  color: #263238; }
+
+.service__form_name input::placeholder, .service__form_type input::placeholder {
+  font-style: normal;
+  color: #263238; }
