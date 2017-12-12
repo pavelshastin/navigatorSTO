@@ -124,15 +124,11 @@ form.service__form {
 
 	.service__form_type {
 		
-		input[type="text"]:focus {
-			
-
-			
-			ul.service__form_type_items {
+		input[type="text"]:focus ul.service__form_type_items {
 
 				left: 0;
 				opacity: 1;
-			}
+			
 		}
 
 		ul.service__form_type_items {
