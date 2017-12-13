@@ -1,5 +1,5 @@
 ﻿.header {
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid $grey;
 	width: 100%;
 	margin-bottom: 42px;
 }
@@ -9,7 +9,7 @@
 	position: relative;
 	width: 100%;
 	//background-color: black;
-	padding-bottom: 40px;
+	
 	height: 719px; 
 	
 }
@@ -33,6 +33,7 @@
 	max-width: $contWidth;
 	height: 100%;
 	margin: 0 auto;
+	padding-bottom: 40px;
 }
 
 
@@ -42,7 +43,7 @@
 	
 	@include flex(row, nowrap, flex-start, center)
 	font-size: 19px; //changed 18px;
-	line-height: 19px;
+	line-height: 0.9;
 	color: $white;
 
 	a:visited {
@@ -61,7 +62,7 @@
 
 .info__menu li {
 	padding: 40px 0;
-	margin-right: 32px;
+	margin-right: 29px;
 
 	&:last-child {
 		margin-right: 0px;
@@ -78,18 +79,21 @@
 	line-height: 49px;
 	color: $yellow;
 	margin: 0;
-	margin-bottom: 13px; //changed 24px
+	margin-bottom: 6px; //changed 24px
 
 }
 
 .info__headers_navigat {
-	font-family: "Myriad Bold";
-	letter-spacing: 1px;
-	font-size: 62px; //changed 46px
-	line-height: 62px;
-	color: $yellow;
-	margin: 0;
+	width: 325px;
+	height: 62px; //46px
 	margin-bottom: 32px; //changed 48px
+
+	svg {
+		width: 100%;
+		height: 100%;
+		fill:$yellow;
+		fill-rule:evenodd;
+	}
 }
 
 .info__headers_eurorus {
@@ -97,34 +101,59 @@
 	line-height: 32px;
 	color: $white;
 	margin: 0;
-	margin-bottom: 42px; //changed 56px
+	margin-bottom: 53px; //changed 56px
+	letter-spacing: 2px;
 }
 
 
 .info__advant {
-	width: 770px;
-	@include flex(row, nowrap, space-between, flex-start);
+	width: 100%;
+	@include flex(row, nowrap, flext-start, flex-start);
 	margin-bottom: 50px; //changed 56px
 
 	div {
-		@include flex(column, nowrap, space-between, center);
-		height: 137px;
-		width: 150px;
-		background: rgba(255,255,255,0.5);
-		
+		@include flex(column, nowrap, flex-start, center);
+	
 	}
 
+
 	svg {
-		width: 100%;
-		height: 50%;
+			width: 100%;
+			height: 56px;
+			margin-bottom: 30px;
+						
+			fill: $yellow;
+			fill-rule: evenodd;
 	}
+
+
+	.info__advant_discounts {
+		width: 26px;
+		margin-right: 0px;
+		margin-left: 191px;
+	}
+
+	.info__advant_guarantee {
+		width: 50px;
+		margin-right: 255px;
+		margin-left: 271px;
+	}
+
+
+	.info__advant_recreation {
+		width: 52px;
+		margin-right: auto;
+		margin-left: 0px;
+	}
+
+
 	
 	a {
-		display: block;
+		
 		padding: 0 7%;
 		text-align: center;
-		line-height: 1.2;
-	}
+		line-height: 0.9;
+	}	
 
 	a:visited {
 		color: $yellow;
@@ -142,8 +171,7 @@
 	a.info__buttons_enroll {
 		font-family: "Myriad Bold";
 		display: block;
-		height: 60px;
-		padding: 20px 29px 23px 29px;
+		padding: 16px 27px;
 		font-size: 24px; //changed 24px;
 		color: $grey;
 		background-color: $yellow;
@@ -160,4 +188,20 @@ a.down_button {
 	border-bottom: none;
 	border-top-color: $yellow;
 	margin-top: auto;
+}
+
+
+span.border_dotted {
+	text-decoration: underline dotted $yellow; 
+	display: block;
+	line-height: 0.9;
+	padding-bottom: 3px;
+	margin-bottom: 8px;
+	
+	&:last-child {
+		margin-bottom: 0px;
+	}
+
+	// margin-bottom: 10px;
+	// border-bottom: 2px dotted $yellow;
 }

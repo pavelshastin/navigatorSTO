@@ -16,25 +16,37 @@ div(id="info").info
 						|КОНТАКТЫ
 				li.info__menu_tol
 					| ТОЛЬЯТТИ&nbsp; 
-					a(href="#") (8482)&nbsp;37-95-30
+					a(href="#") (8482)&nbsp;37&#8209;95&#8209;30
 				li.info__menu_sysr
 					| СЫЗРАНЬ&nbsp;
-					a(href="#") (8464)&nbsp;37-30-60
+					a(href="#") (8464)&nbsp;37&#8209;30&#8209;60
 
 		h1.info__headers_avtoset СЕТЬ АВТОСЕРВИСОВ
-		h2.info__headers_navigat НАВИГАТОР
+		h2.info__headers_navigat 
+			svg
+				use(xlink:href="#Navigator-logo")
 		h3.info__headers_eurorus ЕВРОПЕЙСКИЙ СЕРВИС ПО ОТЕЧЕСТВЕННОЙ ЦЕНЕ
 
 		.info__advant
-			.info__advant_actions
-				svg.info__advant_actions-icon
-				a(href="#") ВСЕГДА&nbsp;ВЫГОДНЫЕ АКЦИИ
+			.info__advant_discounts
+				svg.info__icon
+					use(xlink:href="#discounts-2")
+				a(href="#footer") 
+					span.border_dotted ВСЕГДА&nbsp;ВЫГОДНЫЕ 
+					span.border_dotted АКЦИИ
+					
 			.info__advant_guarantee
-				svg.info__advant_guarantee-icon
-				a(href="#") ГАРАНТИЯ&nbsp;НА&nbsp;РАБОТЫ
-			.info__advant_comfort
-				svg.info__advant_comfort-icon
-				a(href="#") КОМФОРТНАЯ ЗОНА&nbsp;ОЖИДАНИЯ
+				svg.info__icon
+					use(xlink:href="#guarantee")
+				a(href="#") 
+					span.border_dotted ГАРАНТИЯ&nbsp;НА&nbsp;РАБОТЫ
+
+			.info__advant_recreation
+				svg.info__icon
+					use(xlink:href="#recreation")
+				a(href="#")  
+					span.border_dotted КОМФОРТНАЯ
+					span.border_dotted ЗОНА&nbsp;ОЖИДАНИЯ
 
 		.info__buttons
 			a(href="#").info__buttons_enroll ЗАПИСАТЬСЯ

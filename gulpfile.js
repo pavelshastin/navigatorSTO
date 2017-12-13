@@ -99,7 +99,7 @@ gulp.task("sprite", function(){
 
 
 gulp.task("watch", function(){
-	gulp.watch("app/templates/**/*.jade", ['jade']);
+	gulp.watch("app/templates/**/*.*", ['jade']);
 	gulp.watch("app/css/**/*.scss", ['style'], );
 	gulp.watch("bower.json", ['wiredep']);
 	gulp.watch(['app/js/**/*.js', 'app/css/**/*.scss', 'app/css/**/*.css', 'app/*.html'])

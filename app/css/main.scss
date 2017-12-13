@@ -25,13 +25,14 @@ li {
 
 .wrapper {
 	width: 100%;
+	//background: $grey;
 }
 
 
 
 .container {
 	max-width: 1280px;
-	
+	margin: 0 auto;
 	@include flex(column, nowrap, flex-start, center)
 
 }
