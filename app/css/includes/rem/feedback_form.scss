@@ -1,0 +1,154 @@
+.feedback__form {
+	width: 100%;
+	background: transparent;
+	
+}
+
+.feedback__form_container {
+	width: $contWidth;
+	margin: 0 auto;
+	@include flex(column, nowrap, flex-start, center);
+	padding-bottom: 4.210526rem;
+}
+
+
+	h3.feedback__form_header {
+		font-family: "Myriad Bold";
+		font-size: 1.736842rem;
+		line-height: 1.736842rem;
+		color: $grey;
+		padding-top: 3.736842rem;
+		margin-bottom: 1.684211rem;
+	}
+
+
+form.feedback__form {
+	width: 100%;
+	@include flex(row, wrap, space-between, flex-start);
+	padding: 0;
+	margin-bottom: 1.421053rem;
+	
+	>div {
+		@include flex(column, nowrap, flex-start, flex-start);
+		margin-bottom: 1.368421rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.feedback__form_order {
+		margin-right: auto;
+		margin-left: 1.684211rem;
+	}
+
+
+	input[type="text"] {
+		width: 16.789474rem;
+		height: 2.631579rem;
+		border: 0.052632rem solid $greyFormBorder;
+		border-radius: 0.526316rem;
+		text-indent: 1.052632rem;
+
+
+		
+		&:focus, &:hover {
+			outline: none;
+			border: 0.052632rem solid $yellow;
+			border-radius: 0.526316rem;
+			
+		}
+	}
+
+	
+	label {
+		font-size: 0.736842rem; //0.736842rem
+		line-height: 0.736842rem;
+		font-family: "Myriad Reg";
+		color: $greyForm;
+		margin-bottom: 0.947368rem;
+	}
+
+	
+
+	.feedback__form_proposal {
+		width: 100%;
+		margin-bottom: 1.789474rem; //1.684211rem
+
+		textarea {
+			height: 5.263158rem;
+			width: 100%;
+			outline: none;
+			border: 0.052632rem solid $greyFormBorder;
+			border-radius: 0.526316rem;
+			padding: 1.052632rem;
+			text-indent: 1.052632rem;
+
+			&:focus, &:hover {
+				outline: none;
+				border: 0.052632rem solid $yellow;
+				border-radius: 0.526316rem;
+			}
+		}
+	}
+
+
+	.feedback__form_personal {
+		@include flex(row, nowrap, flex-start, center); 
+		
+		input[type="checkbox"] {
+			width: 1.684211rem;
+			height: 1.684211rem;
+			border: none;
+			border-radius: 0.421053rem;
+			background: $yellow;
+		}
+
+		.feedback__form_personal_inscr {
+			margin-left: 1.052632rem;
+			font-size: 0.842105rem; //0.736842rem
+			line-height: 0.842105rem;
+			font-family: "Myriad Reg";
+			color: $grey;
+		}
+	}
+	
+
+}
+
+
+
+
+
+.asterix {
+	color: red;
+}
+
+
+.feedback__buttons {
+
+	button.feedback__buttons_send {
+		font-family: "Myriad Bold";
+		display: block;
+		height: 3.157895rem;
+		padding: 0.789474rem 1.631579rem 1.210526rem 1.631579rem;
+		font-size: 1.263158rem; //changed 1.263158rem;
+		color: $grey;
+		background-color: $yellow;
+		border-radius: 0.421053rem;
+		box-shadow: 0.000000rem 0.052632rem 0.105263rem 0.000000rem #f15a24;
+		letter-spacing: 0.052632rem;
+		margin: 0;
+		border: none;
+
+		&:focus, &:hover {
+			outline: none;
+				
+		}
+	}
+}
+
+
+
+
+

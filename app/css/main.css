@@ -32,6 +32,30 @@ html, body {
   font-family: "Myriad Reg";
   font-size: 19px; }
 
+@madia screen and (max-width: 1280px) {
+  html, body {
+    font-size: 19px; } }
+
+@madia screen and (max-width: 1200px) {
+  html, body {
+    font-size: 17.8125px; } }
+
+@madia screen and (max-width: 992px) {
+  html, body {
+    font-size: 14.725px; } }
+
+@madia screen and (max-width: 768px) {
+  html, body {
+    font-size: 11.4px; } }
+
+@madia screen and (max-width: 480px) {
+  html, body {
+    font-size: 7.125px; } }
+
+@madia screen and (max-width: 320px) {
+  html, body {
+    font-size: 4.75px; } }
+
 a, a:active, a:visited, a:hover {
   text-decoration: none; }
 
@@ -59,55 +83,6 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-
-::-webkit-input-placeholder {
-  font-family: "Myriad Reg";
-  font-style: italic;
-  font-size: 16px;
-  color: #bbbbbb;
-  text-indent: 18px; }
-
-::-moz-placeholder {
-  font-family: "Myriad Reg";
-  font-style: italic;
-  font-size: 16px;
-  color: #bbbbbb;
-  text-indent: 18px; }
-
-::-ms-placeholder {
-  font-family: "Myriad Reg";
-  font-style: italic;
-  font-size: 16px;
-  color: #bbbbbb;
-  text-indent: 18px; }
-
-::-webkit-input-placeholder {
-  font-family: "Myriad Reg";
-  font-style: italic;
-  font-size: 16px;
-  color: #bbbbbb;
-  text-indent: 18px; }
-
-:-ms-input-placeholder {
-  font-family: "Myriad Reg";
-  font-style: italic;
-  font-size: 16px;
-  color: #bbbbbb;
-  text-indent: 18px; }
-
-::-ms-input-placeholder {
-  font-family: "Myriad Reg";
-  font-style: italic;
-  font-size: 16px;
-  color: #bbbbbb;
-  text-indent: 18px; }
-
-::placeholder {
-  font-family: "Myriad Reg";
-  font-style: italic;
-  font-size: 16px;
-  color: #bbbbbb;
-  text-indent: 18px; }
 
 .header {
   border-bottom: 1px solid #263238;
@@ -330,12 +305,12 @@ span.border_dotted {
   padding-bottom: 80px; }
 
 .price__header {
-  padding-top: 77px;
-  margin-bottom: 36px;
+  padding-top: 73px;
+  margin-bottom: 41px;
   font-size: 32px;
   color: #263238;
   text-align: center;
-  letter-spacing: 4px; }
+  letter-spacing: 2px; }
 
 .price__list {
   width: 100%;
@@ -855,33 +830,54 @@ form.service__form {
   .service__buttons button.service__buttons_enroll:focus, .service__buttons button.service__buttons_enroll:hover {
     outline: none; }
 
-.service__form_name input::-webkit-input-placeholder, .service__form_type input::-webkit-input-placeholder {
-  font-style: normal;
-  color: #263238; }
+::-webkit-input-placeholder {
+  font-family: "Myriad Reg";
+  font-style: italic;
+  font-size: 16px;
+  color: #bbbbbb;
+  text-indent: 18px; }
 
-.service__form_name input::-moz-placeholder, .service__form_type input::-moz-placeholder {
-  font-style: normal;
-  color: #263238; }
+::-moz-placeholder {
+  font-family: "Myriad Reg";
+  font-style: italic;
+  font-size: 16px;
+  color: #bbbbbb;
+  text-indent: 18px; }
 
-.service__form_name input::-ms-placeholder, .service__form_type input::-ms-placeholder {
-  font-style: normal;
-  color: #263238; }
+::-ms-placeholder {
+  font-family: "Myriad Reg";
+  font-style: italic;
+  font-size: 16px;
+  color: #bbbbbb;
+  text-indent: 18px; }
 
-.service__form_name input::-webkit-input-placeholder, .service__form_type input::-webkit-input-placeholder {
-  font-style: normal;
-  color: #263238; }
+::-webkit-input-placeholder {
+  font-family: "Myriad Reg";
+  font-style: italic;
+  font-size: 16px;
+  color: #bbbbbb;
+  text-indent: 18px; }
 
-.service__form_name input:-ms-input-placeholder, .service__form_type input:-ms-input-placeholder {
-  font-style: normal;
-  color: #263238; }
+:-ms-input-placeholder {
+  font-family: "Myriad Reg";
+  font-style: italic;
+  font-size: 16px;
+  color: #bbbbbb;
+  text-indent: 18px; }
 
-.service__form_name input::-ms-input-placeholder, .service__form_type input::-ms-input-placeholder {
-  font-style: normal;
-  color: #263238; }
+::-ms-input-placeholder {
+  font-family: "Myriad Reg";
+  font-style: italic;
+  font-size: 16px;
+  color: #bbbbbb;
+  text-indent: 18px; }
 
-.service__form_name input::placeholder, .service__form_type input::placeholder {
-  font-style: normal;
-  color: #263238; }
+::placeholder {
+  font-family: "Myriad Reg";
+  font-style: italic;
+  font-size: 16px;
+  color: #bbbbbb;
+  text-indent: 18px; }
 
 .feedback {
   width: 100%;

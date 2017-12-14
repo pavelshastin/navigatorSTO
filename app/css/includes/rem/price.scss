@@ -1,25 +1,25 @@
 .price {
 	width: 100%;
 	background-color: #e5e6e7;
-	height: 1102px;
+	height: 58.000000rem;
 }
 
 .price_container {
 	width: $contWidth;
 	height: 100%;
 	margin: 0 auto;
-	padding-bottom: 80px; //80px
+	padding-bottom: 4.210526rem; //4.210526rem
 
 }
 
 
 .price__header {
-	padding-top: 73px; //changed 80px
-	margin-bottom: 41px; //48px
-	font-size: 32px; //32px
+	padding-top: 4.052632rem; //changed 4.210526rem
+	margin-bottom: 1.894737rem; //2.526316rem
+	font-size: 1.684211rem; //1.684211rem
 	color: $grey;
 	text-align: center;
-	letter-spacing: 2px; //2px
+	letter-spacing: 0.210526rem; //0.105263rem
 }
 
 
@@ -29,15 +29,15 @@
 .price__list {
 	width: 100%;
 	@include flex(row, wrap, space-between, flex-start);
-	margin-bottom: 50px-32px; //48px
+	margin-bottom: 2.631579rem-1.684211rem; //2.526316rem
 
 	li {
-		width: 232px;
-		height: 232px;
-		border-radius: 10px;
+		width: 12.210526rem;
+		height: 12.210526rem;
+		border-radius: 0.526316rem;
 		opacity: 0.89;
 		position: relative;
-		margin-bottom: 32px; //changed 32px
+		margin-bottom: 1.684211rem; //changed 1.684211rem
 		overflow: hidden;
 		@include flex(column, nowrap, center, center);
 
@@ -137,14 +137,14 @@
 
 
 	.item_inner_container {
-		width: 52px;
-		height: 115px;
+		width: 2.736842rem;
+		height: 6.052632rem;
 		@include flex(column, nowrap, space-between, center);
 
 
 		svg {
 			width: 100%;
-			margin-bottom: 15px; //24px
+			margin-bottom: 0.789474rem; //1.263158rem
 
 			fill: $yellow; //#fbca0b
 			fill-rule: evenodd;
@@ -152,7 +152,7 @@
 
 		a {
 			text-align: center;
-			font-size: 16px; //changed 16px
+			font-size: 0.842105rem; //changed 0.842105rem
 			color: $yellow;
 			line-height: 1.4;
 		}
@@ -174,13 +174,13 @@
 	a.price__buttons_enroll {
 		font-family: "Myriad Bold";
 		display: block;
-		padding: 16px 27px;
-		font-size: 24px; //changed 24px;
+		padding: 0.842105rem 1.421053rem;
+		font-size: 1.263158rem; //changed 1.263158rem;
 		color: $grey;
 		background-color: $yellow;
-		border-radius: 8px;
-		box-shadow: 0px 1px 2px 0px #f15a24;
-		letter-spacing: 1px;
+		border-radius: 0.421053rem;
+		box-shadow: 0.000000rem 0.052632rem 0.105263rem 0.000000rem #f15a24;
+		letter-spacing: 0.052632rem;
 	}
 
 }

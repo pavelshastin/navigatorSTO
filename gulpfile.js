@@ -15,6 +15,7 @@ var gulp = require("gulp"),
 	browserSync = require("browser-sync"),
 	reload = browserSync.reload,
 	wait = require("gulp-wait"),
+	pxtorem = require("gulp-px-to-rem"),
 	time = 1500;
 
 
@@ -32,11 +33,12 @@ gulp.task("jade", function(){
 });
 
 
-gulp.task("style", function(){
-	gulp.src("app/css/*.scss")
+gulp.task("style", function() {
+	gulp.src("app/css/main.scss")
 		.pipe(wait(time))
 		.pipe(sass())
 		.pipe(prefixer())
+		//.pipe(pxtorem({rootPX: 19, accuracy: 6}))
 		.pipe(gulp.dest("app/css/"))
 });
 

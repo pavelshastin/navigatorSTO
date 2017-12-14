@@ -1,7 +1,12 @@
+$rem: false; //true
+
 //@import "./normalize.css";
+
 @import "./includes/_fonts.scss";
 @import "./includes/_mixins.scss";
 
+
+$rem_font: 19px;
 
 * {
 	box-sizing: border-box;
@@ -9,11 +14,54 @@
 	padding: 0;
 }
 
+
+
 html, body {
 	font-family: "Myriad Reg";
-	font-size: 19px;
-
+	font-size: $rem_font;
 }
+
+@madia screen and (max-width: 1280px) {
+	html, body {
+		font-size: 1280px/1280px*$rem_font;
+	}
+}
+
+
+@madia screen and (max-width: 1200px) {
+	html, body {
+		font-size: 1200px/1280px*$rem_font;
+	}
+}
+
+
+@madia screen and (max-width: 992px) {
+	html, body {
+		font-size: 992px/1280px*$rem_font;
+	}
+}
+
+
+@madia screen and (max-width: 768px) {
+	html, body {
+		font-size: 768px/1280px*$rem_font;
+	}
+}
+
+
+@madia screen and (max-width: 480px) {
+	html, body {
+		font-size: 480px/1280px*$rem_font;
+	}
+}
+
+
+@madia screen and (max-width: 320px) {
+	html, body {
+		font-size: 320px/1280px*$rem_font;
+	}
+}
+
 
 a, a:active, a:visited, a:hover {
 	text-decoration: none;
@@ -38,64 +86,16 @@ li {
 }
 	
 
-$font: "Myriad Reg";
-$style: italic;
-$size: 16px;
-$color: #bbbbbb;
-$padding: 18px; 
-
-
-::-webkit-input-placeholder {
-	font-family: $font;
-	font-style: $style;
-	font-size: $size;
-	color: $color;
-	text-indent: $padding;
-
-}
-
-
-::-moz-placeholder {
- 	font-family: $font;
-	font-style: $style;
-	font-size: $size;
-	color: $color;
-	text-indent: $padding;
- }
-
-
-::-ms-placeholder {
- 	font-family: $font;
-	font-style: $style;
-	font-size: $size;
-	color: $color;
-	text-indent: $padding;
-
-}
-
-
-::placeholder {
-	font-family: $font;
-	font-style: $style;
-	font-size: $size;
-	color: $color;
-	text-indent: $padding;
-
-}
 
 
 
+	@import "./includes/common_info.scss";
+	@import "./includes/price.scss";
+	@import "./includes/why.scss";
+	@import "./includes/service_form.scss";
+	@import "./includes/feedback.scss";
+	@import "./includes/feedback_form.scss";
+	@import "./includes/contacts.scss";
 
 
 
-
-@import "./includes/common_info.scss";
-@import "./includes/price.scss";
-@import "./includes/why.scss";
-@import "./includes/service_form.scss";
-@import "./includes/feedback.scss";
-@import "./includes/feedback_form.scss";
-@import "./includes/contacts.scss";
-	
-
-	
