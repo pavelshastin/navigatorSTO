@@ -117,6 +117,8 @@ li {
 .info {
   position: relative;
   width: 100%;
+  background-color: black;
+  opacity: 0.999;
   height: 719px; }
 
 .info:after {
@@ -127,8 +129,20 @@ li {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
+  z-index: -2;
+  width: 100%;
+  height: 100%; }
+
+.info:before {
+  content: "";
+  position: absolute;
+  background: black;
   opacity: 0.7;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
   width: 100%;
   height: 100%; }
 
@@ -270,7 +284,7 @@ li {
     padding: 0 7%;
     text-align: center;
     line-height: 0.9; }
-  .info__advant a:visited {
+  .info__advant a:visited, .info__advant a:active, .info__advant a:hover, .info__advant a:link {
     color: #fbca0b; }
   .info__advant .info__advant_guarantee a {
     margin-bottom: 20px; }
@@ -345,8 +359,7 @@ span.border_dotted {
     width: 232px;
     height: 232px;
     border-radius: 10px;
-    background-color: black;
-    opacity: 0.5;
+    opacity: 0.89;
     position: relative;
     margin-bottom: 32px;
     overflow: hidden;
@@ -366,23 +379,52 @@ span.border_dotted {
         -ms-flex-align: center;
             align-items: center; }
     .price__list li:hover {
-      cursor: pointer;
-      background-color: #fbca0b;
-      opacity: 0.7; }
+      cursor: pointer; }
+      .price__list li:hover:after {
+        background-color: #fbca0b; }
       .price__list li:hover a {
         color: #263238; }
       .price__list li:hover svg {
         fill: #263238; }
-  .price__list li .curtain {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    background-size: cover; }
+    .price__list li:after, .price__list li:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0; }
+    .price__list li:after {
+      z-index: -1;
+      background-color: black;
+      opacity: 0.7; }
+    .price__list li:before {
+      z-index: -2; }
+    .price__list li.price__list_tech_service:before {
+      background: url("../../images/tech-service.jpg") 0 0 no-repeat; }
+    .price__list li.price__list_cooling-system:before {
+      background: url("../../images/cooling-system.jpg") 0 0 no-repeat; }
+    .price__list li.price__list_tyres:before {
+      background: url("../../images/tyres.jpg") 0 0 no-repeat; }
+    .price__list li.price__list_geometry:before {
+      background: url("../../images/geometry.jpg") 0 0 no-repeat; }
+    .price__list li.price__list_steering-wheel:before {
+      background: url("../../images/steering-wheel.jpg") 0 0 no-repeat; }
+    .price__list li.price__list_brakers:before {
+      background: url("../../images/brakers.jpg") 0 0 no-repeat; }
+    .price__list li.price__list_battery:before {
+      background: url("../../images/battery.jpg") 0 0 no-repeat; }
+    .price__list li.price__list_starter:before {
+      background: url("../../images/starter.jpg") 0 0 no-repeat; }
+    .price__list li.price__list_optics:before {
+      background: url("../../images/optics.jpg") 0 0 no-repeat; }
+    .price__list li.price__list_conditioner:before {
+      background: url("../../images/conditioner.jpg") 0 0 no-repeat; }
+    .price__list li.price__list_gear:before {
+      background: url("../../images/gear.jpg") 0 0 no-repeat; }
+    .price__list li.price__list_other:before {
+      background: url("../../images/other.jpg") 0 0 no-repeat; }
   .price__list .item_inner_container {
     width: 52px;
     height: 115px;
@@ -403,7 +445,6 @@ span.border_dotted {
             align-items: center; }
     .price__list .item_inner_container svg {
       width: 100%;
-      height: auto;
       margin-bottom: 15px;
       fill: #fbca0b;
       fill-rule: evenodd; }
@@ -432,8 +473,7 @@ span.border_dotted {
   .price__buttons a.price__buttons_enroll {
     font-family: "Myriad Bold";
     display: block;
-    height: 60px;
-    padding: 20px 29px 23px 29px;
+    padding: 16px 27px;
     font-size: 24px;
     color: #263238;
     background-color: #fbca0b;
