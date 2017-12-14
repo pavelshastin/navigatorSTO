@@ -38,7 +38,7 @@ gulp.task("style", function() {
 		.pipe(wait(time))
 		.pipe(sass())
 		.pipe(prefixer())
-		//.pipe(pxtorem({rootPX: 19, accuracy: 6}))
+		//.pipe(pxtorem({rootPX: 19, accuracy: 6})) //use CAREFULLY!!!
 		.pipe(gulp.dest("app/css/"))
 });
 

@@ -23,6 +23,16 @@
 		opacity: 0;
 		z-index: 10;
 	}
+
+	.arrow_area {
+		@include flex(row, nowrap, flex-end, center);
+		position: absolute;
+		background: transparent;
+		top: 0;
+		right: 0;
+		height: 100%;
+	
+	}
 }
 
 
@@ -40,19 +50,103 @@
 	}
 
 	input.service__form_city {
-		background: transparent;
+		background: green;
+		opacity: 0.5;
 		border: none;
 		color: $yellow;
 		margin-left: 10px;
 		width: 200px;
-		 font-family: "Myriad Bold";
+		font-family: "Myriad Bold";
 		padding: 0;
+		height: 31px;
 		font-size: 31px;
-		line-height: 0px;
+		line-height: 0.9;
 
 		.service__form_city_items {
-			top: 50px;
-			opacity: 0;
+			
+			input[type="text"]:focus {
+			//border: 1px solid $greyFormBorder;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+
+			+ul.service__form_type_items {
+				left: 0;
+				top: 50px;
+				opacity: 1;
+			}
+		}
+			
+		ul.service__form_type_items {
+			background: $white;
+			border: 1px solid $greyFormBorder; //$greyFormBorder
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+			width: 319px;
+
+			li {
+				font-family: "Myriad Reg";
+				font-size: 16px;
+				line-height: 50px;
+				border-bottom: 1px solid $greyFormBorder;
+				text-indent: 20px;
+				
+				&:last-child {
+					border: none;
+				}
+			}
+
+		}
+
+		.arrow_area {
+			width: 15%;
+
+			&:hover {
+				cursor: pointer;
+				
+				+input[type="text"] {
+					//border: 1px solid $greyFormBorder;
+					border-bottom-left-radius: 0;
+					border-bottom-right-radius: 0;
+
+					+ul.service__form_type_items {
+						left: 0;
+						top: 50px;
+						opacity: 1;
+					}
+				}
+
+				
+			}
+
+			.arrow_down {
+				width: 0;
+				border: 8px solid transparent;
+				border-bottom: none;
+				border-top-color: $yellow;
+				margin-right: 22px; 
+			}
+
+			.arrow_up {
+				width: 0;
+				border: 8px solid transparent;
+				border-top: none;
+				border-bottom-color: $yellow;
+				margin-right: 22px; 
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
 		}	
 	}
 }
@@ -81,7 +175,7 @@ form.service__form {
 		text-indent: 20px;
 
 		
-		&:focus, &:hover {
+		&:focus  {
 			outline: none;
 			border: 1px solid $yellow;
 			border-radius: 10px;
@@ -124,21 +218,80 @@ form.service__form {
 
 	.service__form_type {
 		
-		input[type="text"]:focus ul.service__form_type_items {
+		input[type="text"]:focus {
+			//border: 1px solid $greyFormBorder;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
 
+			+ul.service__form_type_items {
 				left: 0;
+				top: 50px;
 				opacity: 1;
+			}
+		}
 			
-		}
-
 		ul.service__form_type_items {
-	
-			top: 50px;
-			opacity: 1;
+			background: $white;
+			border: 1px solid $greyFormBorder; //$greyFormBorder
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+			width: 319px;
+
+			li {
+				font-family: "Myriad Reg";
+				font-size: 16px;
+				line-height: 50px;
+				border-bottom: 1px solid $greyFormBorder;
+				text-indent: 20px;
+				
+				&:last-child {
+					border: none;
+				}
+			}
 
 		}
-	
+
+		.arrow_area {
+			width: 15%;
+
+			&:hover {
+				cursor: pointer;
+				
+				+input[type="text"] {
+					//border: 1px solid $greyFormBorder;
+					border-bottom-left-radius: 0;
+					border-bottom-right-radius: 0;
+
+					+ul.service__form_type_items {
+						left: 0;
+						top: 50px;
+						opacity: 1;
+					}
+				}
+
+				
+			}
+
+			.arrow_down {
+				width: 0;
+				border: 8px solid transparent;
+				border-bottom: none;
+				border-top-color: $yellow;
+				margin-right: 22px; 
+			}
+
+			.arrow_up {
+				width: 0;
+				border: 8px solid transparent;
+				border-top: none;
+				border-bottom-color: $yellow;
+				margin-right: 22px; 
+			}
+		}
+
 	}
+
+	
 
 	.service__form_personal {
 		@include flex(row, nowrap, flex-start, center); 

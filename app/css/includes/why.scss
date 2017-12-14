@@ -16,8 +16,8 @@
 	font-family: "Myriad Bold";
 	font-size: 34px; //34px
 	color: $yellow;
-	padding-top: 74px;//80px
-	margin-bottom: 36px; //48px
+	padding-top: 71px;//80px
+	margin-bottom: 38px; //48px
 
 }
 
@@ -68,7 +68,7 @@
 			.why__img_arrow_right {
 				width: 77px;
 				height: 334px;
-				border-left:x solid #becada;
+				border-left: 1px solid #becada;
 				@include flex(row, nowrap, center, center);
 
 				.arrow_right{
@@ -119,7 +119,7 @@
 		font-family: "Myriad Bold";
 		display: block;
 		height: 60px;
-		padding: 20px 29px 23px 29px;
+		padding: 15px 27px;
 		font-size: 24px; //changed 24px;
 		color: $grey;
 		background-color: $yellow;

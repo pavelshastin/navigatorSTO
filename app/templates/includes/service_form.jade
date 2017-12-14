@@ -4,6 +4,8 @@
 		.service__header_area
 			h3.service__header ЗАЯВКА НА РЕМОНТ И ОБСЛУЖИВАНИЕ В
 			.select_input
+				.arrow_area
+					.arrow_down
 				input(id="service__form_city" form="service_form" type="text" value="ТОЛЬЯТТИ").service__form_city
 				ul.service__form_city_items
 					li(id="service__form_city_tol") ТОЛЬЯТТИ
@@ -29,7 +31,9 @@
 
 			.service__form_type
 				label(for="service__form_type") Вид сервиса
-				.select_input 
+				.select_input
+					.arrow_area
+						.arrow_down 
 					input(id="service__form_type" type="text" placeholder="Система охлаждения")
 					ul.service__form_type_items
 						li(id="service__form_type_item-1") Техническое обслуживание
