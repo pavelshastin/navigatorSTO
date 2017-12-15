@@ -32,6 +32,8 @@
     "wiredep": "^4.0.0"
   },
   "dependencies": {
+    "g": "^2.0.1",
+    "node-sass": "^4.7.2",
     "normalize.css": "^7.0.0"
   },
   "keywords": "--unsafe-perm for node-sass"

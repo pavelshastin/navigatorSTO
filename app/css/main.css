@@ -709,18 +709,16 @@ a.down_button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 70px;
+  padding-top: 75px;
   margin-bottom: 38px; }
   .service__header_area .service__header {
     font-family: "Myriad Bold";
     font-size: 31px;
     line-height: 31px;
     color: #263238; }
-  .service__header_area input.service__form_city {
-    background: green;
-    opacity: 0.5;
+  .service__header_area .select_input input.service__form_city {
     border: none;
-    color: #fbca0b;
+    color: #ffffff;
     margin-left: 10px;
     width: 200px;
     font-family: "Myriad Bold";
@@ -728,50 +726,68 @@ a.down_button {
     height: 31px;
     font-size: 31px;
     line-height: 0.9; }
-    .service__header_area input.service__form_city .service__form_city_items input[type="text"]:focus {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0; }
-      .service__header_area input.service__form_city .service__form_city_items input[type="text"]:focus + ul.service__form_type_items {
-        left: 0;
-        top: 50px;
-        opacity: 1; }
-    .service__header_area input.service__form_city .service__form_city_items ul.service__form_type_items {
-      background: #ffffff;
-      border: 1px solid #e5e6e7;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-      width: 319px; }
-      .service__header_area input.service__form_city .service__form_city_items ul.service__form_type_items li {
-        font-family: "Myriad Reg";
-        font-size: 16px;
-        line-height: 50px;
-        border-bottom: 1px solid #e5e6e7;
-        text-indent: 20px; }
-        .service__header_area input.service__form_city .service__form_city_items ul.service__form_type_items li:last-child {
-          border: none; }
-    .service__header_area input.service__form_city .service__form_city_items .arrow_area {
-      width: 15%; }
-      .service__header_area input.service__form_city .service__form_city_items .arrow_area:hover {
-        cursor: pointer; }
-        .service__header_area input.service__form_city .service__form_city_items .arrow_area:hover + input[type="text"] {
-          border-bottom-left-radius: 0;
-          border-bottom-right-radius: 0; }
-          .service__header_area input.service__form_city .service__form_city_items .arrow_area:hover + input[type="text"] + ul.service__form_type_items {
+  .service__header_area .select_input ul.service__form_city_items {
+    background: #ffffff;
+    -webkit-box-shadow: 0 0 10px 10px #e5e6e7;
+            box-shadow: 0 0 10px 10px #e5e6e7;
+    border-radius: 10px;
+    width: 225px;
+    left: 0;
+    top: 0;
+    opacity: 1; }
+    .service__header_area .select_input ul.service__form_city_items li {
+      font-family: "Myriad Reg";
+      font-size: 16px;
+      line-height: 50px;
+      border-bottom: 1px solid #e5e6e7;
+      text-indent: 20px; }
+      .service__header_area .select_input ul.service__form_city_items li:first-child {
+        font-family: "Myriad Bold";
+        font-size: 31px;
+        line-height: 0.9; }
+      .service__header_area .select_input ul.service__form_city_items li.arrow_area {
+        width: 15%; }
+        .service__header_area .select_input ul.service__form_city_items li.arrow_area:hover {
+          cursor: pointer; }
+          .service__header_area .select_input ul.service__form_city_items li.arrow_area:hover + input[type="text"] + ul.service__form_type_items {
             left: 0;
             top: 50px;
             opacity: 1; }
-      .service__header_area input.service__form_city .service__form_city_items .arrow_area .arrow_down {
-        width: 0;
-        border: 8px solid transparent;
-        border-bottom: none;
-        border-top-color: #fbca0b;
-        margin-right: 22px; }
-      .service__header_area input.service__form_city .service__form_city_items .arrow_area .arrow_up {
-        width: 0;
-        border: 8px solid transparent;
-        border-top: none;
-        border-bottom-color: #fbca0b;
-        margin-right: 22px; }
+        .service__header_area .select_input ul.service__form_city_items li.arrow_area .arrow_down {
+          width: 0;
+          border: 8px solid transparent;
+          border-bottom: none;
+          border-top-color: #fbca0b;
+          margin-right: 22px; }
+        .service__header_area .select_input ul.service__form_city_items li.arrow_area .arrow_up {
+          width: 0;
+          border: 8px solid transparent;
+          border-top: none;
+          border-bottom-color: #fbca0b;
+          margin-right: 22px; }
+  .service__header_area .select_input .arrow_area {
+    width: 15%; }
+    .service__header_area .select_input .arrow_area:hover {
+      cursor: pointer; }
+      .service__header_area .select_input .arrow_area:hover + input[type="text"] {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0; }
+        .service__header_area .select_input .arrow_area:hover + input[type="text"] + ul.service__form_type_items {
+          left: 0;
+          top: 50px;
+          opacity: 1; }
+    .service__header_area .select_input .arrow_area .arrow_down {
+      width: 0;
+      border: 8px solid transparent;
+      border-bottom: none;
+      border-top-color: #fbca0b;
+      margin-right: 22px; }
+    .service__header_area .select_input .arrow_area .arrow_up {
+      width: 0;
+      border: 8px solid transparent;
+      border-top: none;
+      border-bottom-color: #fbca0b;
+      margin-right: 22px; }
 
 form.service__form {
   width: 100%;
@@ -919,7 +935,7 @@ form.service__form {
   font-family: "Myriad Bold";
   display: block;
   height: 60px;
-  padding: 15px 26px 23px 24px;
+  padding: 16px 27px;
   font-size: 24px;
   color: #263238;
   background-color: #fbca0b;
