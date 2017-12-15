@@ -4,14 +4,20 @@ div(id="contacts").contacts
 		.contacts__city_items
 			div(class="contacts__city_tol active")
 				.contacts__city_icon
-					svg
+					svg.location_active
+						use(xlink:href="#location_active")
+					svg.location_passive
+						use(xlink:href="#location_passive")
 				.contacts__city_name ТОЛЬЯТТИ
 				.contacts__city_addr Борковская,&nbsp;65&nbsp;|&nbsp;(8482)&nbsp;37&nbsp;-&nbsp;95&nbsp;-&nbsp;30
 				.contacts__city_time 8:00&nbsp;-&nbsp;20:00
 			.border
 			div(class="contacts__city_sysr")
 				.contacts__city_icon
-					svg
+					svg.location_active
+						use(xlink:href="#location_active")
+					svg.location_passive
+						use(xlink:href="#location_passive")
 				.contacts__city_name СЫЗРАНЬ
 				.contacts__city_addr Опорный,&nbsp;16&nbsp;|&nbsp;(8464)&nbsp;37&nbsp;-&nbsp;30&nbsp;-&nbsp;60
 				.contacts__city_time 8:00&nbsp;-&nbsp;20:00
