@@ -9,12 +9,11 @@
 	width: $contWidth;
 	height: 100%;
 	margin: 0 auto;
-	@include flex(column, nowrap, flex-start, center);
+	@include flex(column, nowrap, flex-start, flex-start);
 }
 
 
 .select_input {
-	//overflow: hidden;
 	position: relative;
 
 	ul {
@@ -24,28 +23,35 @@
 		z-index: 10;
 	}
 
-	.arrow_area {
-		@include flex(row, nowrap, flex-end, center);
-		position: absolute;
-		background: transparent;
-		top: 0;
-		right: 0;
-		height: 100%;
 	
+}
+
+
+.arrow_area {
+	@include flex(row, nowrap, center, center);
+	position: absolute;
+	background: transparent;
+	top: 0;
+	right: 0;
+	height: 100%;
+	
+	&:hover {
+		cursor: pointer;
 	}
 }
 
 
 .service__header_area {
 	@include flex(row, nowrap, flex-start, center);
-	padding-top: 75px; //80px
-	margin-bottom: 38px;//48px
+	margin-left: 110px;
+	padding-top: 72px; //80px
+	margin-bottom: 41px;//48px
 	
 	
 	.service__header {
 		font-family: "Myriad Bold";
-		font-size: 31px;
-		line-height: 31px;
+		font-size: 33px;
+		line-height: 33px;
 		color: $grey;
 	}
 
@@ -53,118 +59,110 @@
 
 		input.service__form_city {
 			border: none;
-			color: $white; //$yellow;
+			color: $yellow;
 			margin-left: 10px;
-			width: 200px;
+			width: 209px; //226px
 			font-family: "Myriad Bold";
 			padding: 0;
-			height: 31px;
-			font-size: 31px;
+			height: 32px;
+			font-size: 32px;
 			line-height: 0.9;
+			letter-spacing: 1px;
+
+			&:focus {
+				outline: none;
+			}
+
+			&:disabled {
+				background: transparent;
+			}
 		}
 
 
 		ul.service__form_city_items {
 			background: $white;
-			box-shadow: 0 0 10px 10px $greyFormBorder; //$greyFormBorder
+			box-shadow: 0px 0px 5px 5px $greyFormBorder; //$greyFormBorder
 			border-radius: 10px;
-			width: 225px;
-			left: 0;
-			top: 0;
-			opacity: 1;
-			
+			width: 226px;
+			top: -14px;
+			// left: -6px;
+			// opacity: 1;			
 			
 			li {
-				font-family: "Myriad Reg";
-				font-size: 16px;
-				line-height: 50px;
-				border-bottom: 1px solid $greyFormBorder;
-				text-indent: 20px;
+				font-family: "Myriad Bold";
+				font-size: 25px;
+				line-height: 2;
+				padding-left: 18px;
 				
-				&:first-child {
-					font-family: "Myriad Bold";
-					font-size: 31px;
-					line-height: 0.9;
+				
 				}
+
 			
-				&.arrow_area {
-					width: 15%;
 
-					&:hover {
-						cursor: pointer;
-						
-						+input[type="text"] {
-							
-							+ul.service__form_type_items {
-								left: 0;
-								top: 50px;
-								opacity: 1;
-							}
-						}
+			:first-child {
+				font-family: "Myriad Bold";
+				color: $yellow;
+				font-size: 31px;
+				line-height: 0.9;
+				padding-top: 15px;
+				letter-spacing: 2px;
+				position: relative;
+				@include flex(row, nowrap, flex-start, center);
+				
 
-						
-					}
+				.arrow_area {
+					width: 16px + 8*2px + 16px;
+					height: 100%;
+					padding: 0;
 
-					.arrow_down {
-						width: 0;
-						border: 8px solid transparent;
-						border-bottom: none;
-						border-top-color: $yellow;
-						margin-right: 22px; 
-					}
+
 
 					.arrow_up {
 						width: 0;
+						height: 0;
 						border: 8px solid transparent;
 						border-top: none;
 						border-bottom-color: $yellow;
-						margin-right: 22px; 
+						margin-top: -12px;
+						margin-left: 7px; 
 					}
-				}
-
-
-				}
-
+				}	
 			}
 
+		}
 
-			.arrow_area {
-					width: 15%;
 
-					&:hover {
-						cursor: pointer;
-						
-						+input[type="text"] {
-							//border: 1px solid $greyFormBorder;
-							border-bottom-left-radius: 0;
-							border-bottom-right-radius: 0;
+		.arrow_area {
+				width: 16px + 8*2px + 16px;
+				right: 0px;
+				top: 0px;
 
-							+ul.service__form_type_items {
-								left: 0;
-								top: 50px;
-								opacity: 1;
-							}
-						}
-
-						
+				&:hover {
+					cursor: pointer;
+					
+					~ul.service__form_city_items {
+						left: -6px;
+						opacity: 1;
 					}
 
-					.arrow_down {
-						width: 0;
-						border: 8px solid transparent;
-						border-bottom: none;
-						border-top-color: $yellow;
-						margin-right: 22px; 
-					}
+					
+				}
 
-					.arrow_up {
-						width: 0;
-						border: 8px solid transparent;
-						border-top: none;
-						border-bottom-color: $yellow;
-						margin-right: 22px; 
-					}
-			}
+				.arrow_down {
+					width: 0;
+					border: 8px solid transparent;
+					border-bottom: none;
+					border-top-color: $yellow;
+					
+				}
+
+				.arrow_up {
+					width: 0;
+					border: 8px solid transparent;
+					border-top: none;
+					border-bottom-color: $yellow; 
+				}
+		}
 
 	}
 
@@ -224,7 +222,7 @@ form.service__form {
 			border: 1px solid $greyFormBorder;
 			border-radius: 10px;
 			padding: 20px;
-			text-indent: 20px;
+			//text-indent: 20px;
 
 			&:focus, &:hover {
 				outline: none;
@@ -236,17 +234,28 @@ form.service__form {
 
 
 	.service__form_type {
+
+		input[type="text"] {
+			font-family: "Myriad Reg";
+			font-size: 16px;	
+
+			&:disabled {
+				background: transparent;
+			}
+		}
 		
 		input[type="text"]:focus {
 			//border: 1px solid $greyFormBorder;
 			border-bottom-left-radius: 0;
 			border-bottom-right-radius: 0;
 
-			+ul.service__form_type_items {
+			~ul.service__form_type_items {
 				left: 0;
 				top: 50px;
 				opacity: 1;
 			}
+
+
 		}
 			
 		ul.service__form_type_items {
@@ -276,12 +285,12 @@ form.service__form {
 			&:hover {
 				cursor: pointer;
 				
-				+input[type="text"] {
+				~input[type="text"] {
 					//border: 1px solid $greyFormBorder;
 					border-bottom-left-radius: 0;
 					border-bottom-right-radius: 0;
 
-					+ul.service__form_type_items {
+					~ul.service__form_type_items {
 						left: 0;
 						top: 50px;
 						opacity: 1;
@@ -315,12 +324,38 @@ form.service__form {
 	.service__form_personal {
 		@include flex(row, nowrap, flex-start, center); 
 		
-		input[type="checkbox"] {
+		.input_checkbox {
 			width: 32px;
 			height: 32px;
-			border: none;
 			border-radius: 8px;
 			background: $yellow;
+			position: relative;
+			
+
+			svg {
+				position: absolute;
+				background: transparent;
+				width: 15px;
+				height: 10px;
+				top: (32px - 10px)/2;
+				left: (32px - 15px)/2;
+				z-index: 10;
+				
+				fill: #ffffff;
+				opacity: 0;
+				
+				&.checked {
+					opacity: 1;
+				}
+			}
+
+		}
+
+		input[type="checkbox"] {
+			width: 100%;
+			height: 100%;
+			outline: none;
+			opacity: 0;
 		}
 
 		.service__form_personal_inscr {
@@ -329,6 +364,7 @@ form.service__form {
 			line-height: 16px;
 			font-family: "Myriad Reg";
 			color: $grey;
+			
 		}
 	}
 	
@@ -345,6 +381,9 @@ form.service__form {
 
 
 .service__buttons {
+	width: 100%;
+	@include flex(column, nowrap, flex-start, center);
+
 	button.service__buttons_enroll {
 		font-family: "Myriad Bold";
 		display: block;

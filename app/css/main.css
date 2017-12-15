@@ -660,9 +660,9 @@ a.down_button {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
 
 .select_input {
   position: relative; }
@@ -671,27 +671,30 @@ a.down_button {
     left: -9999px;
     opacity: 0;
     z-index: 10; }
-  .select_input .arrow_area {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: absolute;
-    background: transparent;
-    top: 0;
-    right: 0;
-    height: 100%; }
+
+.arrow_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  background: transparent;
+  top: 0;
+  right: 0;
+  height: 100%; }
+  .arrow_area:hover {
+    cursor: pointer; }
 
 .service__header_area {
   display: -webkit-box;
@@ -709,85 +712,95 @@ a.down_button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 75px;
-  margin-bottom: 38px; }
+  margin-left: 110px;
+  padding-top: 72px;
+  margin-bottom: 41px; }
   .service__header_area .service__header {
     font-family: "Myriad Bold";
-    font-size: 31px;
-    line-height: 31px;
+    font-size: 33px;
+    line-height: 33px;
     color: #263238; }
   .service__header_area .select_input input.service__form_city {
     border: none;
-    color: #ffffff;
+    color: #fbca0b;
     margin-left: 10px;
-    width: 200px;
+    width: 209px;
     font-family: "Myriad Bold";
     padding: 0;
-    height: 31px;
-    font-size: 31px;
-    line-height: 0.9; }
+    height: 32px;
+    font-size: 32px;
+    line-height: 0.9;
+    letter-spacing: 1px; }
+    .service__header_area .select_input input.service__form_city:focus {
+      outline: none; }
+    .service__header_area .select_input input.service__form_city:disabled {
+      background: transparent; }
   .service__header_area .select_input ul.service__form_city_items {
     background: #ffffff;
-    -webkit-box-shadow: 0 0 10px 10px #e5e6e7;
-            box-shadow: 0 0 10px 10px #e5e6e7;
+    -webkit-box-shadow: 0px 0px 5px 5px #e5e6e7;
+            box-shadow: 0px 0px 5px 5px #e5e6e7;
     border-radius: 10px;
-    width: 225px;
-    left: 0;
-    top: 0;
-    opacity: 1; }
+    width: 226px;
+    top: -14px; }
     .service__header_area .select_input ul.service__form_city_items li {
-      font-family: "Myriad Reg";
-      font-size: 16px;
-      line-height: 50px;
-      border-bottom: 1px solid #e5e6e7;
-      text-indent: 20px; }
-      .service__header_area .select_input ul.service__form_city_items li:first-child {
-        font-family: "Myriad Bold";
-        font-size: 31px;
-        line-height: 0.9; }
-      .service__header_area .select_input ul.service__form_city_items li.arrow_area {
-        width: 15%; }
-        .service__header_area .select_input ul.service__form_city_items li.arrow_area:hover {
-          cursor: pointer; }
-          .service__header_area .select_input ul.service__form_city_items li.arrow_area:hover + input[type="text"] + ul.service__form_type_items {
-            left: 0;
-            top: 50px;
-            opacity: 1; }
-        .service__header_area .select_input ul.service__form_city_items li.arrow_area .arrow_down {
+      font-family: "Myriad Bold";
+      font-size: 25px;
+      line-height: 2;
+      padding-left: 18px; }
+    .service__header_area .select_input ul.service__form_city_items :first-child {
+      font-family: "Myriad Bold";
+      color: #fbca0b;
+      font-size: 31px;
+      line-height: 0.9;
+      padding-top: 15px;
+      letter-spacing: 2px;
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .service__header_area .select_input ul.service__form_city_items :first-child .arrow_area {
+        width: 48px;
+        height: 100%;
+        padding: 0; }
+        .service__header_area .select_input ul.service__form_city_items :first-child .arrow_area .arrow_up {
           width: 0;
-          border: 8px solid transparent;
-          border-bottom: none;
-          border-top-color: #fbca0b;
-          margin-right: 22px; }
-        .service__header_area .select_input ul.service__form_city_items li.arrow_area .arrow_up {
-          width: 0;
+          height: 0;
           border: 8px solid transparent;
           border-top: none;
           border-bottom-color: #fbca0b;
-          margin-right: 22px; }
+          margin-top: -12px;
+          margin-left: 7px; }
   .service__header_area .select_input .arrow_area {
-    width: 15%; }
+    width: 48px;
+    right: 0px;
+    top: 0px; }
     .service__header_area .select_input .arrow_area:hover {
       cursor: pointer; }
-      .service__header_area .select_input .arrow_area:hover + input[type="text"] {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0; }
-        .service__header_area .select_input .arrow_area:hover + input[type="text"] + ul.service__form_type_items {
-          left: 0;
-          top: 50px;
-          opacity: 1; }
+      .service__header_area .select_input .arrow_area:hover ~ ul.service__form_city_items {
+        left: -6px;
+        opacity: 1; }
     .service__header_area .select_input .arrow_area .arrow_down {
       width: 0;
       border: 8px solid transparent;
       border-bottom: none;
-      border-top-color: #fbca0b;
-      margin-right: 22px; }
+      border-top-color: #fbca0b; }
     .service__header_area .select_input .arrow_area .arrow_up {
       width: 0;
       border: 8px solid transparent;
       border-top: none;
-      border-bottom-color: #fbca0b;
-      margin-right: 22px; }
+      border-bottom-color: #fbca0b; }
 
 form.service__form {
   width: 100%;
@@ -849,16 +862,20 @@ form.service__form {
       outline: none;
       border: 1px solid #e5e6e7;
       border-radius: 10px;
-      padding: 20px;
-      text-indent: 20px; }
+      padding: 20px; }
       form.service__form .service__form_proposal textarea:focus, form.service__form .service__form_proposal textarea:hover {
         outline: none;
         border: 1px solid #fbca0b;
         border-radius: 10px; }
+  form.service__form .service__form_type input[type="text"] {
+    font-family: "Myriad Reg";
+    font-size: 16px; }
+    form.service__form .service__form_type input[type="text"]:disabled {
+      background: transparent; }
   form.service__form .service__form_type input[type="text"]:focus {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0; }
-    form.service__form .service__form_type input[type="text"]:focus + ul.service__form_type_items {
+    form.service__form .service__form_type input[type="text"]:focus ~ ul.service__form_type_items {
       left: 0;
       top: 50px;
       opacity: 1; }
@@ -880,10 +897,10 @@ form.service__form {
     width: 15%; }
     form.service__form .service__form_type .arrow_area:hover {
       cursor: pointer; }
-      form.service__form .service__form_type .arrow_area:hover + input[type="text"] {
+      form.service__form .service__form_type .arrow_area:hover ~ input[type="text"] {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0; }
-        form.service__form .service__form_type .arrow_area:hover + input[type="text"] + ul.service__form_type_items {
+        form.service__form .service__form_type .arrow_area:hover ~ input[type="text"] ~ ul.service__form_type_items {
           left: 0;
           top: 50px;
           opacity: 1; }
@@ -915,12 +932,29 @@ form.service__form {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    form.service__form .service__form_personal input[type="checkbox"] {
+    form.service__form .service__form_personal .input_checkbox {
       width: 32px;
       height: 32px;
-      border: none;
       border-radius: 8px;
-      background: #fbca0b; }
+      background: #fbca0b;
+      position: relative; }
+      form.service__form .service__form_personal .input_checkbox svg {
+        position: absolute;
+        background: transparent;
+        width: 15px;
+        height: 10px;
+        top: 11px;
+        left: 8.5px;
+        z-index: 10;
+        fill: #ffffff;
+        opacity: 0; }
+        form.service__form .service__form_personal .input_checkbox svg.checked {
+          opacity: 1; }
+    form.service__form .service__form_personal input[type="checkbox"] {
+      width: 100%;
+      height: 100%;
+      outline: none;
+      opacity: 0; }
     form.service__form .service__form_personal .service__form_personal_inscr {
       margin-left: 20px;
       font-size: 16px;
@@ -931,22 +965,39 @@ form.service__form {
 .asterix {
   color: red; }
 
-.service__buttons button.service__buttons_enroll {
-  font-family: "Myriad Bold";
-  display: block;
-  height: 60px;
-  padding: 16px 27px;
-  font-size: 24px;
-  color: #263238;
-  background-color: #fbca0b;
-  border-radius: 8px;
-  -webkit-box-shadow: 0px 1px 2px 0px #f15a24;
-          box-shadow: 0px 1px 2px 0px #f15a24;
-  letter-spacing: 1px;
-  margin: 0;
-  border: none; }
-  .service__buttons button.service__buttons_enroll:focus, .service__buttons button.service__buttons_enroll:hover {
-    outline: none; }
+.service__buttons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .service__buttons button.service__buttons_enroll {
+    font-family: "Myriad Bold";
+    display: block;
+    height: 60px;
+    padding: 16px 27px;
+    font-size: 24px;
+    color: #263238;
+    background-color: #fbca0b;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 1px 2px 0px #f15a24;
+            box-shadow: 0px 1px 2px 0px #f15a24;
+    letter-spacing: 1px;
+    margin: 0;
+    border: none; }
+    .service__buttons button.service__buttons_enroll:focus, .service__buttons button.service__buttons_enroll:hover {
+      outline: none; }
 
 ::-webkit-input-placeholder {
   font-family: "Myriad Reg";
@@ -1329,12 +1380,29 @@ form.feedback__form {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    form.feedback__form .feedback__form_personal input[type="checkbox"] {
+    form.feedback__form .feedback__form_personal .input_checkbox {
       width: 32px;
       height: 32px;
-      border: none;
       border-radius: 8px;
-      background: #fbca0b; }
+      background: #fbca0b;
+      position: relative; }
+      form.feedback__form .feedback__form_personal .input_checkbox svg {
+        position: absolute;
+        background: transparent;
+        width: 15px;
+        height: 10px;
+        top: 11px;
+        left: 8.5px;
+        z-index: 10;
+        fill: #ffffff;
+        opacity: 0; }
+        form.feedback__form .feedback__form_personal .input_checkbox svg.checked {
+          opacity: 1; }
+    form.feedback__form .feedback__form_personal input[type="checkbox"] {
+      width: 100%;
+      height: 100%;
+      outline: none;
+      opacity: 0; }
     form.feedback__form .feedback__form_personal .feedback__form_personal_inscr {
       margin-left: 20px;
       font-size: 16px;

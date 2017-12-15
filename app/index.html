@@ -67,6 +67,13 @@
 
 
 </g>
+
+
+<g id="accesories">
+	
+	<symbol id="check"  viewBox="0 0 15 10"><defs></defs><title>check</title><rect  x="319" y="571" width="1" height="1" transform="translate(-566 329) rotate(-90)"/><rect  x="320" y="570" width="1" height="1" transform="translate(-564 329) rotate(-90)"/><rect  x="321" y="569" width="1" height="1" transform="translate(-562 329) rotate(-90)"/><rect  x="322" y="568" width="1" height="1" transform="translate(-560 329) rotate(-90)"/><rect  x="323" y="567" width="1" height="1" transform="translate(-558 329) rotate(-90)"/><rect  x="324" y="566" width="1" height="1" transform="translate(-556 329) rotate(-90)"/><rect  x="325" y="565" width="1" height="1" transform="translate(-554 329) rotate(-90)"/><rect  x="326" y="564" width="1" height="1" transform="translate(-552 329) rotate(-90)"/><rect  x="327" y="563" width="1" height="1" transform="translate(-550 329) rotate(-90)"/><rect  x="328" y="562" width="1" height="1" transform="translate(-548 329) rotate(-90)"/><rect  x="314" y="567" width="1" height="1" transform="translate(568 -309) rotate(90)"/><rect  x="315" y="568" width="1" height="1" transform="translate(570 -309) rotate(90)"/><rect  x="316" y="569" width="1" height="1" transform="translate(572 -309) rotate(90)"/><rect  x="317" y="570" width="1" height="1" transform="translate(574 -309) rotate(90)"/><rect  x="318" y="571" width="1" height="1" transform="translate(576 -309) rotate(90)"/></symbol>
+</g>
+
   
 </svg>
 			<div id="info" class="info">
@@ -234,20 +241,21 @@
 							<div class="arrow_area">
 								<div class="arrow_down"></div>
 							</div>
-							<input id="service__form_city" form="service_form" type="text" value="ТОЛЬЯТТИ" class="service__form_city"/>
+							<input id="service__form_city" form="service_form" type="text" value="ТОЛЬЯТТИ" disabled="disabled" class="service__form_city"/>
 							<ul class="service__form_city_items">
-								<li class="arrow_area">
-									<div class="arrow_down"></div>
+								<li id="service__form_city_current">ТОЛЬЯТТИ
+									<div class="arrow_area">
+										<div class="arrow_up"></div>
+									</div>
 								</li>
-								<li id="service__form_city_tol">ТОЛЬЯТТИ</li>
-								<li id="service__form_city_sysr">СЫЗРАНЬ</li>
+								<li id="service__form_city_sysr">СЫЗРАНИ</li>
 							</ul>
 						</div>
 					</div>
 					<form name="service__form" id="service__form" action="#" method="post" class="service__form">
 						<div class="service__form_name">
 							<label for="service__form_name">Представьтесь пожалуйста <span class="asterix">*</span> </label>
-							<input id="service__form_name" type="text" placeholder="Иванов Ив|" required="required"/>
+							<input id="service__form_name" type="text" placeholder="Иванов Иван" required="required"/>
 						</div>
 						<div class="service__form_phone">
 							<label for="service__form_phone">Телефон <span class="asterix">*</span> </label>
@@ -267,7 +275,7 @@
 								<div class="arrow_area">
 									<div class="arrow_down"> </div>
 								</div>
-								<input id="service__form_type" type="text" placeholder="Система охлаждения"/>
+								<input id="service__form_type" type="text" value="Система охлаждения" disabled="disabled"/>
 								<ul class="service__form_type_items">
 									<li id="service__form_type_item-1">Техническое обслуживание</li>
 									<li id="service__form_type_item-2">Система охлаждения</li>
@@ -293,8 +301,13 @@
 							<textarea id="service__form_proposal" placeholder="Напишите дополнительные пожелания по обслуживанию"></textarea>
 						</div>
 						<div class="service__form_personal">
-							<label for="service__form_personal"> </label>
-							<input type="checkbox" id="service__form_personal" checked="checked"/>
+							<label for="service__form_personal"></label>
+							<div class="input_checkbox">
+								<svg class="checked">
+									<use xlink:href="#check"></use>
+								</svg>
+								<input type="checkbox" id="service__form_personal"/>
+							</div>
 							<div class="service__form_personal_inscr">Согласен на обработку персональных данных	</div>
 						</div>
 					</form>
@@ -361,8 +374,13 @@
 							<textarea id="feedback__form_proposal" placeholder=""></textarea>
 						</div>
 						<div class="feedback__form_personal">
-							<label for="feedback__form_personal"> </label>
-							<input type="checkbox" id="feedback__form_personal" checked="checked"/>
+							<label for="feedback__form_personal"></label>
+							<div class="input_checkbox">
+								<svg class="checked">
+									<use xlink:href="#check"></use>
+								</svg>
+								<input type="checkbox" id="feedback__form_personal"/>
+							</div>
 							<div class="feedback__form_personal_inscr">Согласен на обработку персональных данных</div>
 						</div>
 					</form>
