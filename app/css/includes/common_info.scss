@@ -1,7 +1,7 @@
 ﻿.header {
 	border-bottom: 1px solid $grey;
 	width: 100%;
-	margin-bottom: 42px;
+	margin-bottom: 46px;
 }
 
 
@@ -19,6 +19,7 @@
 	content: "";
 	position: absolute;
 	background: url("../images/Navigator-STO-header.jpg") 0 0 no-repeat;
+	background-size: 100% auto;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -46,6 +47,7 @@
 .info_container {
 	@include flex(column, nowrap, flex-start, center);
 	max-width: $contWidth;
+	width: 100%;
 	height: 100%;
 	margin: 0 auto;
 	padding-bottom: 40px;
@@ -57,36 +59,76 @@
 	list-style-type: none;
 	
 	@include flex(row, nowrap, flex-start, center)
-	font-size: 19px; //changed 18px;
-	line-height: 0.9;
-	color: $white;
+	
 
-	a:visited {
+	
+	li {
+		padding: 40px 0;
+		margin-right: 29px;
+		@include flex(row, nowrap, flex-start, center);
+		
+
+		a, div {
+			font-size: 19px; //changed 18px;
+			line-height: 0.9;
+			color: $white;
+			display: block;
+			height: 100%;
+		}
+
+
+		&:hover {
+			color: $white;
+			cursor: pointer;
+
+			a {
+				color: $yellow;
+				position: relative;
+
+				&:after {					
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: 1px;
+					bottom: -1px-40px;
+					left: 0;
+					background: $yellow;
+					z-index: 10;
+				}
+			}
+
+		}
+
+
+
+
+
+
+
+
+		&:last-child {
+			margin-right: 0px;
+		}
+
+		&.info__menu_tol {
+			margin-left: auto;
+		}
+	}
+
+
+
+	a:visited, a:link {
 		color: $white;
 	}
 
 
-	.info__menu_tol a {
-		color: $yellow;
-	}
-
-	.info__menu_sysr a {
-		color: $yellow;
-	}
+	
 }
 
-.info__menu li {
-	padding: 40px 0;
-	margin-right: 29px;
 
-	&:last-child {
-		margin-right: 0px;
-	}
 
-	&.info__menu_tol {
-		margin-left: auto;
-	}
-}
+
+
 
 .info__headers_avtoset {
 	font-family: "Myriad Bold";

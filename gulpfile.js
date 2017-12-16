@@ -33,6 +33,14 @@ gulp.task("jade", function(){
 });
 
 
+gulp.task("media_list", function() {
+	gulp.src("app/css/media_list.scss")
+		.pipe(wait(time))
+		.pipe(sass())
+		.pipe(gulp.dest("app/css/"))
+});
+
+
 gulp.task("style", function() {
 	gulp.src("app/css/main.scss")
 		.pipe(wait(time))
@@ -73,7 +81,7 @@ gulp.task("sprite", function(){
 			.pipe(wait(time))
 			.pipe(spriteSmith({
 				imgName: "images/sprites.png",
-				cssName: "css/common/sprites.scss",
+				cssName: "css/sprites.css",
 				padding: 10,
 				cssFormat: "css",
 				cssOpts: {

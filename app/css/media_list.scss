@@ -1,0 +1,47 @@
+﻿$rem_font: 19px;
+
+html, body {
+	font-family: "Myriad Reg";
+	font-size: $rem_font;
+}
+
+@media screen and (max-width: 1280px) {
+	html, body {
+		font-size: 1280px/1280px*$rem_font;
+	}
+}
+
+
+@media screen and (max-width: 1200px) {
+	html, body {
+		font-size: 1200px/1280px*$rem_font;
+	}
+}
+
+
+@media screen and (max-width: 992px) {
+	html, body {
+		font-size: 992px/1280px*$rem_font;
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	html, body {
+		font-size: 768px/1280px*$rem_font;
+	}
+}
+
+
+@media screen and (max-width: 480px) {
+	html, body {
+		font-size: 480px/1280px*$rem_font;
+	}
+}
+
+
+@media screen and (max-width: 320px) {
+	html, body {
+		font-size: 320px/1280px*$rem_font;
+	}
+}

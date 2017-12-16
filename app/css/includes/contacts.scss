@@ -38,9 +38,9 @@
 				top: 0;
 				left: 0;
 
-				&.location_active{
-					opacity: 0;
-				}
+				fill: $greyContacts;
+
+				
 			}
 		}
 
@@ -83,11 +83,17 @@
 
 		&.active {
 			.contacts__city_icon {
+				
+				svg {
+
+					fill: $yellow;
+				}
 
 			}
 
 			.contacts__city_name {
 				color: $yellow;
+				border-bottom: none;
 
 			}
 
@@ -98,18 +104,23 @@
 			.contacts__city_time {
 				color: $white;
 			}
+
+			&:after {
+			content: "";
+			position: absolute;
+			width: 0;
+			height: 0;
+			border: 20px solid transparent;
+			border-bottom: none;
+			border-top-color: $grey;
+			z-index: 10;
+			top: 242px;
+			left: (160px - 20px*2)/2;
 		}
 
-		// &.active {
-		// 	&:after {
-		// 		content: "";
-		// 		position: absolute;
-		// 		border: 20px solid transparent;
-		// 		border-bottom: none;
-		// 		border-bottom-color: $yellow;
-		// 		z-index: 10;
-		// 	}
-		// }
+		}
+
+
 	}
 
 
@@ -148,10 +159,17 @@ footer.contacts__footer {
 
 
 		.contacts__footer_menu_logo {
-			font-family: "Myriad Bold";
-			font-size: 26px;
-			line-height: 0.9;
-			padding: 40px 0px;
+			// font-family: "Myriad Bold";
+			// font-size: 26px;
+			// line-height: 0.9;
+			padding: 40px 0px; 
+
+			svg {
+				width: 144px;
+				height: 26px;
+
+				fill: $greyFooter;
+			}
 		}
 
 
@@ -161,15 +179,36 @@ footer.contacts__footer {
 
 			li {
 				margin-right: 29px; //32px
-				padding-bottom: 40px;
-
-				a {
+				height: 15px + 40px;
+				@include flex(row, nowrap, flex-start, center);
+				
+				a, div {
 					color: $greyFooter;
 					font-size: 15px;
+					display: block;
+					height: 100%;
+					
 				}
 
-				a:hover {
+				&:hover {
 					color: $white;
+					cursor: pointer;
+
+					a {
+						color: $white;
+						position: relative;
+
+						&:after {					
+							content: "";
+							position: absolute;
+							width: 100%;
+							height: 1px;
+							bottom: -1px;
+							left: 0;
+							background: $white;
+							z-index: 10;
+						}
+					}
 
 				}
 
@@ -180,6 +219,8 @@ footer.contacts__footer {
 				&:last-child {
 					margin-right: 0;
 				}
+
+				
 			}
 
 			

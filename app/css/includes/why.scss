@@ -36,6 +36,10 @@
 		border-radius: 10px;
 		position: relative;
 
+		img {
+			width: 100%;
+		}
+
 
 		.why__img_overlayer {
 			position: absolute;
@@ -130,10 +134,3 @@
 }
 
 
-a.down_button {
-	width: 0;
-	border: 12px solid transparent;
-	border-bottom: none;
-	border-top-color: $yellow;
-	margin-top: auto;
-}

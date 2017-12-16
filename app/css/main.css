@@ -28,34 +28,6 @@
   margin: 0;
   padding: 0; }
 
-html, body {
-  font-family: "Myriad Reg";
-  font-size: 19px; }
-
-@madia screen and (max-width: 1280px) {
-  html, body {
-    font-size: 19px; } }
-
-@madia screen and (max-width: 1200px) {
-  html, body {
-    font-size: 17.8125px; } }
-
-@madia screen and (max-width: 992px) {
-  html, body {
-    font-size: 14.725px; } }
-
-@madia screen and (max-width: 768px) {
-  html, body {
-    font-size: 11.4px; } }
-
-@madia screen and (max-width: 480px) {
-  html, body {
-    font-size: 7.125px; } }
-
-@madia screen and (max-width: 320px) {
-  html, body {
-    font-size: 4.75px; } }
-
 a, a:active, a:visited, a:hover {
   text-decoration: none; }
 
@@ -87,7 +59,7 @@ li {
 .header {
   border-bottom: 1px solid #263238;
   width: 100%;
-  margin-bottom: 42px; }
+  margin-bottom: 46px; }
 
 .info {
   position: relative;
@@ -100,6 +72,7 @@ li {
   content: "";
   position: absolute;
   background: url("../images/Navigator-STO-header.jpg") 0 0 no-repeat;
+  background-size: 100% auto;
   top: 0;
   left: 0;
   right: 0;
@@ -138,6 +111,7 @@ li {
       -ms-flex-align: center;
           align-items: center;
   max-width: 1023px;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
   padding-bottom: 40px; }
@@ -158,24 +132,52 @@ li {
           justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
-  font-size: 19px;
-  line-height: 0.9;
-  color: #ffffff; }
-  .info__menu a:visited {
+          align-items: center; }
+  .info__menu li {
+    padding: 40px 0;
+    margin-right: 29px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .info__menu li a, .info__menu li div {
+      font-size: 19px;
+      line-height: 0.9;
+      color: #ffffff;
+      display: block;
+      height: 100%; }
+    .info__menu li:hover {
+      color: #ffffff;
+      cursor: pointer; }
+      .info__menu li:hover a {
+        color: #fbca0b;
+        position: relative; }
+        .info__menu li:hover a:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          bottom: -41px;
+          left: 0;
+          background: #fbca0b;
+          z-index: 10; }
+    .info__menu li:last-child {
+      margin-right: 0px; }
+    .info__menu li.info__menu_tol {
+      margin-left: auto; }
+  .info__menu a:visited, .info__menu a:link {
     color: #ffffff; }
-  .info__menu .info__menu_tol a {
-    color: #fbca0b; }
-  .info__menu .info__menu_sysr a {
-    color: #fbca0b; }
-
-.info__menu li {
-  padding: 40px 0;
-  margin-right: 29px; }
-  .info__menu li:last-child {
-    margin-right: 0px; }
-  .info__menu li.info__menu_tol {
-    margin-left: auto; }
 
 .info__headers_avtoset {
   font-family: "Myriad Bold";
@@ -364,6 +366,7 @@ span.border_dotted {
     .price__list li:after, .price__list li:before {
       content: "";
       position: absolute;
+      background-size: 100% auto;
       width: 100%;
       height: 100%;
       top: 0;
@@ -517,6 +520,8 @@ span.border_dotted {
     overflow: hidden;
     border-radius: 10px;
     position: relative; }
+    .why__img_container .why__img_container_images img {
+      width: 100%; }
     .why__img_container .why__img_container_images .why__img_overlayer {
       position: absolute;
       width: 100%;
@@ -631,13 +636,6 @@ span.border_dotted {
   -webkit-box-shadow: 0px 1px 2px 0px #f15a24;
           box-shadow: 0px 1px 2px 0px #f15a24;
   letter-spacing: 1px; }
-
-a.down_button {
-  width: 0;
-  border: 12px solid transparent;
-  border-bottom: none;
-  border-top-color: #fbca0b;
-  margin-top: auto; }
 
 .service {
   width: 100%;
@@ -1489,9 +1487,8 @@ form.feedback__form {
         height: 100%;
         position: absolute;
         top: 0;
-        left: 0; }
-        .contacts__city_container .contacts__city_items .contacts__city_icon svg.location_active {
-          opacity: 0; }
+        left: 0;
+        fill: #4e5a60; }
     .contacts__city_container .contacts__city_items .contacts__city_name {
       font-size: 24px;
       width: auto;
@@ -1527,12 +1524,26 @@ form.feedback__form {
               align-items: center;
       width: 160px;
       position: relative; }
+      .contacts__city_container .contacts__city_items div.active .contacts__city_icon svg {
+        fill: #fbca0b; }
       .contacts__city_container .contacts__city_items div.active .contacts__city_name {
-        color: #fbca0b; }
+        color: #fbca0b;
+        border-bottom: none; }
       .contacts__city_container .contacts__city_items div.active .contacts__city_addr {
         color: #ffffff; }
       .contacts__city_container .contacts__city_items div.active .contacts__city_time {
         color: #ffffff; }
+      .contacts__city_container .contacts__city_items div.active:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-bottom: none;
+        border-top-color: #263238;
+        z-index: 10;
+        top: 242px;
+        left: 60px; }
 
 .contacts_map {
   width: 100%;
@@ -1584,10 +1595,11 @@ footer.contacts__footer {
     line-height: 0.9;
     margin-bottom: 30px; }
     footer.contacts__footer .contacts__footer_menu_cont .contacts__footer_menu_logo {
-      font-family: "Myriad Bold";
-      font-size: 26px;
-      line-height: 0.9;
       padding: 40px 0px; }
+      footer.contacts__footer .contacts__footer_menu_cont .contacts__footer_menu_logo svg {
+        width: 144px;
+        height: 26px;
+        fill: #4d4d4d; }
     footer.contacts__footer .contacts__footer_menu_cont ul.contacts__footer_menu {
       width: 815px;
       display: -webkit-box;
@@ -1607,12 +1619,42 @@ footer.contacts__footer {
               align-items: flex-end; }
       footer.contacts__footer .contacts__footer_menu_cont ul.contacts__footer_menu li {
         margin-right: 29px;
-        padding-bottom: 40px; }
-        footer.contacts__footer .contacts__footer_menu_cont ul.contacts__footer_menu li a {
+        height: 55px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        footer.contacts__footer .contacts__footer_menu_cont ul.contacts__footer_menu li a, footer.contacts__footer .contacts__footer_menu_cont ul.contacts__footer_menu li div {
           color: #4d4d4d;
-          font-size: 15px; }
-        footer.contacts__footer .contacts__footer_menu_cont ul.contacts__footer_menu li a:hover {
-          color: #ffffff; }
+          font-size: 15px;
+          display: block;
+          height: 100%; }
+        footer.contacts__footer .contacts__footer_menu_cont ul.contacts__footer_menu li:hover {
+          color: #ffffff;
+          cursor: pointer; }
+          footer.contacts__footer .contacts__footer_menu_cont ul.contacts__footer_menu li:hover a {
+            color: #ffffff;
+            position: relative; }
+            footer.contacts__footer .contacts__footer_menu_cont ul.contacts__footer_menu li:hover a:after {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 1px;
+              bottom: -1px;
+              left: 0;
+              background: #ffffff;
+              z-index: 10; }
         footer.contacts__footer .contacts__footer_menu_cont ul.contacts__footer_menu li.info__menu_tol {
           margin-left: auto; }
         footer.contacts__footer .contacts__footer_menu_cont ul.contacts__footer_menu li:last-child {
