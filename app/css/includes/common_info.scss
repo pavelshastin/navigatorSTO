@@ -1,7 +1,7 @@
 ﻿.header {
 	border-bottom: 1px solid $grey;
 	width: 100%;
-	margin-bottom: 46px;
+	margin-bottom: 50px;
 }
 
 
@@ -126,28 +126,25 @@
 }
 
 
-
-
-
-
 .info__headers_avtoset {
 	font-family: "Myriad Bold";
 	font-size: 49px; //changed 36px
-	line-height: 49px;
+	line-height: 0.9;
 	color: $yellow;
 	margin: 0;
-	margin-bottom: 6px; //changed 24px
+	margin-bottom: 14px; //changed 24px
 
 }
 
 .info__headers_navigat {
-	width: 325px;
-	height: 62px; //46px
-	margin-bottom: 32px; //changed 48px
+	width: 320px;
+	height: 43px; //46px
+	margin-bottom: 47px; //changed 48px
 
 	svg {
 		width: 100%;
 		height: 100%;
+
 		fill:$yellow;
 		fill-rule:evenodd;
 	}
@@ -158,7 +155,7 @@
 	line-height: 32px;
 	color: $white;
 	margin: 0;
-	margin-bottom: 53px; //changed 56px
+	margin-bottom: 48px; //changed 56px
 	letter-spacing: 2px;
 }
 
@@ -174,13 +171,21 @@
 	}
 
 
-	svg {
-			width: 100%;
-			height: 56px;
-			margin-bottom: 30px;
-						
-			fill: $yellow;
-			fill-rule: evenodd;
+	.info_icon {
+		width: 100%;
+		height: 56px;
+		margin-bottom: 30px;
+		background: transparent;
+
+		svg {
+				width: 100%;
+				height: 100%;
+				
+							
+				fill: $yellow;
+				fill-rule: evenodd;
+		}
+
 	}
 
 

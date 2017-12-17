@@ -59,7 +59,7 @@ li {
 .header {
   border-bottom: 1px solid #263238;
   width: 100%;
-  margin-bottom: 46px; }
+  margin-bottom: 50px; }
 
 .info {
   position: relative;
@@ -182,15 +182,15 @@ li {
 .info__headers_avtoset {
   font-family: "Myriad Bold";
   font-size: 49px;
-  line-height: 49px;
+  line-height: 0.9;
   color: #fbca0b;
   margin: 0;
-  margin-bottom: 6px; }
+  margin-bottom: 14px; }
 
 .info__headers_navigat {
   width: 325px;
   height: 62px;
-  margin-bottom: 32px; }
+  margin-bottom: 47px; }
   .info__headers_navigat svg {
     width: 100%;
     height: 100%;
@@ -202,7 +202,7 @@ li {
   line-height: 32px;
   color: #ffffff;
   margin: 0;
-  margin-bottom: 53px;
+  margin-bottom: 48px;
   letter-spacing: 2px; }
 
 .info__advant {
@@ -239,12 +239,16 @@ li {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  .info__advant svg {
+  .info__advant .info_icon {
     width: 100%;
     height: 56px;
     margin-bottom: 30px;
-    fill: #fbca0b;
-    fill-rule: evenodd; }
+    background: transparent; }
+    .info__advant .info_icon svg {
+      width: 100%;
+      height: 100%;
+      fill: #fbca0b;
+      fill-rule: evenodd; }
   .info__advant .info__advant_discounts {
     width: 26px;
     margin-right: 0px;
@@ -361,7 +365,7 @@ span.border_dotted {
         background-color: #fbca0b; }
       .price__list li:hover a {
         color: #263238; }
-      .price__list li:hover svg {
+      .price__list li:hover .price_icon svg {
         fill: #263238; }
     .price__list li:after, .price__list li:before {
       content: "";
@@ -381,13 +385,13 @@ span.border_dotted {
       z-index: -2; }
     .price__list li.price__list_tech_service:before {
       background: url("../../images/tech-service.jpg") 0 0 no-repeat; }
-    .price__list li.price__list_cooling-system:before {
+    .price__list li.price__list_cooling_system:before {
       background: url("../../images/cooling-system.jpg") 0 0 no-repeat; }
     .price__list li.price__list_tyres:before {
       background: url("../../images/tyres.jpg") 0 0 no-repeat; }
     .price__list li.price__list_geometry:before {
       background: url("../../images/geometry.jpg") 0 0 no-repeat; }
-    .price__list li.price__list_steering-wheel:before {
+    .price__list li.price__list_steering_wheel:before {
       background: url("../../images/steering-wheel.jpg") 0 0 no-repeat; }
     .price__list li.price__list_brakers:before {
       background: url("../../images/brakers.jpg") 0 0 no-repeat; }
@@ -401,7 +405,7 @@ span.border_dotted {
       background: url("../../images/conditioner.jpg") 0 0 no-repeat; }
     .price__list li.price__list_gear:before {
       background: url("../../images/gear.jpg") 0 0 no-repeat; }
-    .price__list li.price__list_other:before {
+    .price__list li.price__list_others:before {
       background: url("../../images/other.jpg") 0 0 no-repeat; }
   .price__list .item_inner_container {
     width: 52px;
@@ -421,11 +425,17 @@ span.border_dotted {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    .price__list .item_inner_container svg {
-      width: 100%;
-      margin-bottom: 15px;
-      fill: #fbca0b;
-      fill-rule: evenodd; }
+    .price__list .item_inner_container .price_icon {
+      widows: 100%;
+      height: 60px;
+      background: transparent; }
+      .price__list .item_inner_container .price_icon svg {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 15px;
+        position: relative;
+        fill: #fbca0b;
+        fill-rule: evenodd; }
     .price__list .item_inner_container a {
       text-align: center;
       font-size: 16px;
@@ -930,24 +940,6 @@ form.service__form {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    form.service__form .service__form_personal .input_checkbox {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      background: #fbca0b;
-      position: relative; }
-      form.service__form .service__form_personal .input_checkbox svg {
-        position: absolute;
-        background: transparent;
-        width: 15px;
-        height: 10px;
-        top: 11px;
-        left: 8.5px;
-        z-index: 10;
-        fill: #ffffff;
-        opacity: 0; }
-        form.service__form .service__form_personal .input_checkbox svg.checked {
-          opacity: 1; }
     form.service__form .service__form_personal input[type="checkbox"] {
       width: 100%;
       height: 100%;
@@ -996,6 +988,34 @@ form.service__form {
     border: none; }
     .service__buttons button.service__buttons_enroll:focus, .service__buttons button.service__buttons_enroll:hover {
       outline: none; }
+
+.input_checkbox {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #fbca0b;
+  position: relative; }
+  .input_checkbox svg {
+    position: absolute;
+    background: transparent;
+    width: 15px;
+    height: 10px;
+    top: 11px;
+    left: 8.5px;
+    z-index: 10;
+    fill: #ffffff;
+    opacity: 0; }
+  .input_checkbox.checked svg {
+    opacity: 1; }
+  .input_checkbox:after {
+    content: "";
+    position: absolute;
+    background: transparent;
+    width: 15px;
+    height: 10px;
+    top: 11px;
+    left: 8.5px;
+    z-index: 10; }
 
 ::-webkit-input-placeholder {
   font-family: "Myriad Reg";
@@ -1378,24 +1398,6 @@ form.feedback__form {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    form.feedback__form .feedback__form_personal .input_checkbox {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      background: #fbca0b;
-      position: relative; }
-      form.feedback__form .feedback__form_personal .input_checkbox svg {
-        position: absolute;
-        background: transparent;
-        width: 15px;
-        height: 10px;
-        top: 11px;
-        left: 8.5px;
-        z-index: 10;
-        fill: #ffffff;
-        opacity: 0; }
-        form.feedback__form .feedback__form_personal .input_checkbox svg.checked {
-          opacity: 1; }
     form.feedback__form .feedback__form_personal input[type="checkbox"] {
       width: 100%;
       height: 100%;
@@ -1407,6 +1409,34 @@ form.feedback__form {
       line-height: 16px;
       font-family: "Myriad Reg";
       color: #263238; }
+
+.input_checkbox {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #fbca0b;
+  position: relative; }
+  .input_checkbox svg {
+    position: absolute;
+    background: transparent;
+    width: 15px;
+    height: 10px;
+    top: 11px;
+    left: 8.5px;
+    z-index: 10;
+    fill: #ffffff;
+    opacity: 0; }
+  .input_checkbox.checked svg {
+    opacity: 1; }
+  .input_checkbox:after {
+    content: "";
+    position: absolute;
+    background: transparent;
+    width: 15px;
+    height: 10px;
+    top: 11px;
+    left: 8.5px;
+    z-index: 10; }
 
 .asterix {
   color: red; }
@@ -1480,7 +1510,7 @@ form.feedback__form {
     .contacts__city_container .contacts__city_items .contacts__city_icon {
       width: 38px;
       height: 56px;
-      margin-bottom: 28px;
+      margin-bottom: 33px;
       position: relative; }
       .contacts__city_container .contacts__city_items .contacts__city_icon svg {
         width: 100%;
@@ -1586,19 +1616,23 @@ footer.contacts__footer {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-bottom: 1px solid #4d4d4d;
     color: #4d4d4d;
     font-size: 14px;
     line-height: 0.9;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    height: 106px; }
     footer.contacts__footer .contacts__footer_menu_cont .contacts__footer_menu_logo {
-      padding: 40px 0px; }
+      width: 144px;
+      height: 26px;
+      position: relative;
+      top: -2px; }
       footer.contacts__footer .contacts__footer_menu_cont .contacts__footer_menu_logo svg {
-        width: 144px;
-        height: 26px;
+        width: 100%;
+        height: 100%;
         fill: #4d4d4d; }
     footer.contacts__footer .contacts__footer_menu_cont ul.contacts__footer_menu {
       width: 815px;
@@ -1619,6 +1653,7 @@ footer.contacts__footer {
               align-items: flex-end; }
       footer.contacts__footer .contacts__footer_menu_cont ul.contacts__footer_menu li {
         margin-right: 29px;
+        padding-top: 26px;
         height: 55px;
         display: -webkit-box;
         display: -ms-flexbox;

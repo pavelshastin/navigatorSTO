@@ -324,32 +324,7 @@ form.service__form {
 	.service__form_personal {
 		@include flex(row, nowrap, flex-start, center); 
 		
-		.input_checkbox {
-			width: 32px;
-			height: 32px;
-			border-radius: 8px;
-			background: $yellow;
-			position: relative;
-			
-
-			svg {
-				position: absolute;
-				background: transparent;
-				width: 15px;
-				height: 10px;
-				top: (32px - 10px)/2;
-				left: (32px - 15px)/2;
-				z-index: 10;
-				
-				fill: #ffffff;
-				opacity: 0;
-				
-				&.checked {
-					opacity: 1;
-				}
-			}
-
-		}
+		
 
 		input[type="checkbox"] {
 			width: 100%;
@@ -404,6 +379,54 @@ form.service__form {
 		}
 	}
 }
+
+
+
+.input_checkbox {
+	width: 32px;
+	height: 32px;
+	border-radius: 8px;
+	background: $yellow;
+	position: relative;
+	
+	
+	svg {
+		position: absolute;
+		background: transparent;
+		width: 15px;
+		height: 10px;
+		top: (32px - 10px)/2;
+		left: (32px - 15px)/2;
+		z-index: 10;
+		
+		fill: #ffffff;
+		opacity: 0;
+		
+	}
+
+
+	&.checked {
+
+		svg {
+			opacity: 1;
+		}
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		background: transparent;
+		width: 15px;
+		height: 10px;
+		top: (32px - 10px)/2;
+		left: (32px - 15px)/2;
+		z-index: 10;
+
+	}
+
+}
+
+
 
 
 
