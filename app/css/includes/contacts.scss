@@ -155,7 +155,7 @@ footer.contacts__footer {
 		font-size: 14px;
 		line-height: 0.9;
 		margin-bottom: 30px;
-		height: 106px;
+		height: 100px;
 		
 
 
@@ -178,20 +178,20 @@ footer.contacts__footer {
 
 		ul.contacts__footer_menu {
 			width: 815px;
-			@include flex(row, nowrap, space-between, flex-end);
+			@include flex(row, nowrap, space-between, center);
+			height: 100%;
 
 			li {
 				margin-right: 29px; //32px
-				padding-top: 26px;
-				height: 15px + 40px;
 				@include flex(row, nowrap, flex-start, center);
+				height: 100%;
 				
 				a, div {
 					color: $greyFooter;
 					font-size: 15px;
 					display: block;
 					height: 100%;
-					
+					line-height: 100px;
 				}
 
 				&:hover {
