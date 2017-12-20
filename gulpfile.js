@@ -154,50 +154,50 @@ var log = function (error) {
 
  
 // Очистка папки
-gulp.task('clean', function(){
-	return gulp.src("dist", [{read: false}])
-			.pipe(clean());	
+// gulp.task('clean', function(){
+// 	return gulp.src("dist", [{read: false}])
+// 			.pipe(clean());	
 
-}); 
-
-
-// Переносим HTML, CSS, JS в папку dist 
-gulp.task('useref', function(){
-
-return gulp.src(['dist/**/*'])
-		.pipe(useref())
-		.pipe(gulpif("*.js", uglify()))
-		.pipe(gulpif("*.css", minifyCss({compatibility: 'ie8'})))
-		.pipe(gulp.dest("dist/"))
-});
+// }); 
 
 
+// // Переносим HTML, CSS, JS в папку dist 
+// gulp.task('useref', function(){
 
-//перенос шрифтов
-gulp.task("fonts", function(){
-	return gulp.src("app/fonts/*")
-		//.pipe(filter(['*.svg','*.otf',]))
-		.pipe(gulp.dest("dist/fonts"))
-});
+// return gulp.src(['dist/**/*'])
+// 		.pipe(useref())
+// 		.pipe(gulpif("*.js", uglify()))
+// 		.pipe(gulpif("*.css", minifyCss({compatibility: 'ie8'})))
+// 		.pipe(gulp.dest("dist/"))
+// });
 
-//перенос картинок
-gulp.task('images', function () {
-  return gulp.src('app/images/**/*')
-    .pipe(imagemin({
-      progressive: true,
-      interlaced: true
-    }))
-    .pipe(gulp.dest('dist/images'));
-});
+
+
+// //перенос шрифтов
+// gulp.task("fonts", function(){
+// 	return gulp.src("app/fonts/*")
+// 		//.pipe(filter(['*.svg','*.otf',]))
+// 		.pipe(gulp.dest("dist/fonts"))
+// });
+
+// //перенос картинок
+// gulp.task('images', function () {
+//   return gulp.src('app/images/**/*')
+//     .pipe(imagemin({
+//       progressive: true,
+//       interlaced: true
+//     }))
+//     .pipe(gulp.dest('dist/images'));
+// });
  
 
 
-// Сборка и вывод размера содержимого папки dist
-gulp.task('dist', ['useref', 'images', 'fonts'], function () {
-  return gulp.src('dist/**/*').pipe(size({title: 'build'}));
-});
+// // Сборка и вывод размера содержимого папки dist
+// gulp.task('dist', ['useref', 'images', 'fonts'], function () {
+//   return gulp.src('dist/**/*').pipe(size({title: 'build'}));
+// });
 
-// Собираем папку DIST (только после компиляции Jade)
-gulp.task('build', ['dist', 'style', 'jade', 'wiredep']);
+// // Собираем папку DIST (только после компиляции Jade)
+// gulp.task('build', ['dist', 'style', 'jade', 'wiredep']);
 
 

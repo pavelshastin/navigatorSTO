@@ -679,6 +679,8 @@ span.border_dotted {
     left: -9999px;
     opacity: 0;
     z-index: 10; }
+    .select_input ul li:hover {
+      cursor: pointer; }
 
 .arrow_area {
   display: -webkit-box;
@@ -899,19 +901,10 @@ form.service__form {
       line-height: 50px;
       border-bottom: 1px solid #e5e6e7;
       text-indent: 20px; }
-      form.service__form .service__form_type ul.service__form_type_items li:last-child {
-        border: none; }
   form.service__form .service__form_type .arrow_area {
     width: 15%; }
     form.service__form .service__form_type .arrow_area:hover {
       cursor: pointer; }
-      form.service__form .service__form_type .arrow_area:hover ~ input[type="text"] {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0; }
-        form.service__form .service__form_type .arrow_area:hover ~ input[type="text"] ~ ul.service__form_type_items {
-          left: 0;
-          top: 50px;
-          opacity: 1; }
     form.service__form .service__form_type .arrow_area .arrow_down {
       width: 0;
       border: 8px solid transparent;
@@ -924,6 +917,13 @@ form.service__form {
       border-top: none;
       border-bottom-color: #fbca0b;
       margin-right: 22px; }
+  form.service__form .service__form_type .select_input.visible input[type="text"] {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; }
+  form.service__form .service__form_type .select_input.visible ul.service__form_type_items {
+    left: 0;
+    top: 50px;
+    opacity: 1; }
   form.service__form .service__form_personal {
     display: -webkit-box;
     display: -ms-flexbox;
