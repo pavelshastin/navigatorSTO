@@ -49,46 +49,112 @@ if(Modernizr.svg) {
 }
 
 
+
+
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
 
-	function checkboxHandler(event) {
-		var checkbox = this.getElementsByTagName("input")[0];
-
-		if (!checkbox.hasAttribute("checked")) {
-			
-			this.classList.add("checked");
-		} else {
-
-			this.classList.remove("checked");	
-		}
-	}
-
-
-
-	function dropdownHandler(event) {
-
-
-	}
-
-	var checkConts = Array.prototype.slice.call(document.getElementsByClassName("input_checkbox"), 0);
 	
-
+	var checkConts = Array.prototype.slice.call(document.querySelectorAll(".input_checkbox"), 0);
 	var dropdownConts = Array.prototype.slice.call(document.querySelectorAll(".select_input"), 0);
+	var buttonAreas = Array.prototype.slice.call(document.querySelectorAll("div[class*='_buttons']", 0));
+
+	//console.dir(buttonAreas.join("\n"));
+
+	buttonAreas.map(function(buttonArea){
+
+		var buttons = Array.prototype.slice.call(buttonArea.querySelectorAll("*[class*='_buttons_']"), 0);
+
+
+		console.log(buttons[0]);
+		
+		buttons.map(function(button){
+
+			button.onmousedown = function(event){
+				
+				button.classList.add("click");
+			}
+
+			button.onmouseup = function(event){
+				
+				button.classList.remove("click");
+			}
+
+		})	
+
+	});
+
+
+	console.dir(checkConts);
 
 	checkConts.map(function(item){
-		item.onclick = checkboxHandler;
+		
+		item.onclick = function(event){
+
+			var checkbox = this.getElementsByTagName("input")[0];
+
+				if (!checkbox.hasAttribute("checked")) {
+					
+					console.log("checked " + this.className);
+					this.classList.add("checked");
+					checkbox.setAttribute("checked", "checked")
+
+				} else {
+					
+					checkbox.removeAttribute("checked")
+					this.classList.remove("checked");	
+				}
+
+			};
 	})
+
+
 
 
 	console.dir(dropdownConts);
 
 	dropdownConts.map(function(item){
+
 		var arrow_area = item.querySelector(".arrow_area");
 		var arrow = arrow_area.querySelector("div[class^=arrow_]");
 		var list = item.querySelector("ul");
 		var field = item.querySelector("input[type='text']");
 
 		
+
+		if(list.classList.contains("service__form_city_items")) {
+
+			field.changeCity = function(event){
+				console.log("onchange");
+
+				var city_list = ["ТОЛЬЯТТИ", "САМАРЕ", "СЫЗРАНИ", "ЖИГУЛЕВСКЕ"]
+				
+				city_list = city_list.filter(function(item){
+
+						return item != field.value;
+					});
+
+				list.children[0].textContent = field.value;
+				
+				for(var i=0; i<city_list.length; i++) {
+						list.children[i+1].textContent = city_list[i];
+					}
+				
+				console.dir(list.children);
+			}
+
+			console.dir(field);
+		
+		}
+
+
 		arrow_area.onclick = function(event){
 
 			if(arrow.classList.contains("arrow_down")) {
@@ -111,9 +177,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		list.onclick = function(event) {
 
-			var list_item = event.target.textContent;
+			var list_item = event.target.textContent ? event.target.textContent: field.value;
+
+			//console.log(list_item);
 			field.value = list_item;
+
+			if(list.classList.contains("service__form_city_items")) field.changeCity();
+			
 			arrow_area.click();
+
 		}
 		
 		

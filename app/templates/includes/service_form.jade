@@ -9,10 +9,11 @@
 				input(id="service__form_city" form="service_form" type="text" value="ТОЛЬЯТТИ" disabled).service__form_city
 				ul.service__form_city_items
 					li(id="service__form_city_current") ТОЛЬЯТТИ
-						.arrow_area
-							.arrow_up
+					li(id="service__form_city_sysr") САМАРЕ
 					li(id="service__form_city_sysr") СЫЗРАНИ
-					
+					li(id="service__form_city_sysr") ЖИГУЛЕВСКЕ
+					li.arrow_area
+						.arrow_up
 							
 		form(name="service__form" id="service__form" action="#" method="post").service__form
 			
@@ -62,12 +63,12 @@
 
 			.service__form_personal
 				label(for="service__form_personal")
-				div(class="input_checkbox checked")
+				div(class="input_checkbox")
 					svg
 						use(xlink:href="#check")
 					input(type="checkbox" id="service__form_personal") 
 				.service__form_personal_inscr Согласен на обработку персональных данных	
 
 		.service__buttons
-			button(id="submit" form="service_form" ).service__buttons_enroll  ЗАПИСАТЬСЯ 
+			button(id="submit" form="service_form" class="service__buttons_enroll")  ЗАПИСАТЬСЯ 
 				
