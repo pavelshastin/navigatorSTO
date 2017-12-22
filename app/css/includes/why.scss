@@ -35,8 +35,11 @@
 		overflow:hidden;
 		border-radius: 10px;
 		position: relative;
+		@include flex(row, nowrap, flex-start, center);
+
 
 		img {
+			position: relative;
 			width: 100%;
 		}
 

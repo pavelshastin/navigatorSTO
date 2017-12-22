@@ -60,11 +60,48 @@ if(Modernizr.svg) {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-
+	var remBase = parseInt(window.getComputedStyle(document.body).fontSize);
+	console.log("remBase: " + remBase);
 	
 	var checkConts = Array.prototype.slice.call(document.querySelectorAll(".input_checkbox"), 0);
 	var dropdownConts = Array.prototype.slice.call(document.querySelectorAll(".select_input"), 0);
-	var buttonAreas = Array.prototype.slice.call(document.querySelectorAll("div[class*='_buttons']", 0));
+	var buttonAreas = Array.prototype.slice.call(document.querySelectorAll("div[class*='_buttons']"), 0);
+	var imgConts = Array.prototype.slice.call(document.querySelectorAll("div[class$='__img_container']"), 0);
+
+
+
+	imgConts.map(function(imgCont){
+		console.log("imgConts");
+
+		var images = Array.prototype.slice.call(imgCont.querySelectorAll("img"), 0);
+		var imagesLeft = [];
+		var leftArrow = imgCont.querySelector("div[class*='__img_arrow_left']");
+		var rightArrow = imgCont.querySelector("div[class*='__img_arrow_right']");
+
+		console.log("leftArrow: " + leftArrow.className);
+		console.log("rightArrow: " + rightArrow.className);
+
+		leftArrow.onclick = function(event) {
+
+
+		}
+
+
+		
+
+		//img.style.left = -(left + width) + "px";
+		imagesLeft[0] = parseInt(window.getComputedStyle(images[0]).left);
+		
+		for(var i = 1; i<images.length; i++) {
+			imagesLeft[i] = imagesLeft[i-1] + parseInt(window.getComputedStyle(images[i-1]).width); 
+		}
+
+		console.dir(imagesLeft)
+		
+	})
+
+
+
 
 	//console.dir(buttonAreas.join("\n"));
 

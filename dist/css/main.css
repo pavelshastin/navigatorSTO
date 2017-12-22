@@ -528,8 +528,24 @@ span.border_dotted {
     background: transparent;
     overflow: hidden;
     border-radius: 10px;
-    position: relative; }
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .why__img_container .why__img_container_images img {
+      position: relative;
       width: 100%; }
     .why__img_container .why__img_container_images .why__img_overlayer {
       position: absolute;
