@@ -545,8 +545,11 @@ span.border_dotted {
         -ms-flex-align: center;
             align-items: center; }
     .why__img_container .why__img_container_images img {
-      position: relative;
-      width: 100%; }
+      position: absolute;
+      height: 100%;
+      z-index: 5;
+      -webkit-transition: left 500ms;
+      transition: left 500ms; }
     .why__img_container .why__img_container_images .why__img_overlayer {
       position: absolute;
       width: 100%;
@@ -554,6 +557,7 @@ span.border_dotted {
       top: 0;
       left: 0;
       z-index: 10;
+      background: transparent;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;

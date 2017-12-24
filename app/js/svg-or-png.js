@@ -1,4 +1,4 @@
-﻿
+
 if(Modernizr.svg) { 
 
 	function getXmlHttp(){
@@ -71,32 +71,84 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 	imgConts.map(function(imgCont){
-		console.log("imgConts");
-
-		var images = Array.prototype.slice.call(imgCont.querySelectorAll("img"), 0);
-		var imagesLeft = [];
+		
+		var imageWrap = Array.prototype.slice.call(imgCont.querySelectorAll("img"), 0);
+		var imagesCoord = [];
 		var leftArrow = imgCont.querySelector("div[class*='__img_arrow_left']");
 		var rightArrow = imgCont.querySelector("div[class*='__img_arrow_right']");
+		var buttonsCont = imgCont.querySelector("div[class$='__img_container_buttons']");
+		var buttons = Array.prototype.slice.call(buttonsCont.children);
+		var currImage = 0;
+		var screen = imgCont.querySelector("div[class$='__img_container_images'");
+		var screenWidth = parseInt(window.getComputedStyle(screen).width, 10);
 
 		console.log("leftArrow: " + leftArrow.className);
 		console.log("rightArrow: " + rightArrow.className);
+		console.log("screenWidth: " + screenWidth);
+
+		var sumLeft = 0;
+
+		for(var i=0; i<imageWrap.length; i++) {
+
+			imageWrap[i].style.left = sumLeft + "px";
+			console.log("left: " + imageWrap[i].style.left);
+			sumLeft += parseInt(window.getComputedStyle(imageWrap[i]).width, 10);
+		}
+
+
+
+		function widthSum(num){
+			var widthSum = 0;
+
+			for (var i = num; i >= 0; i--) {
+				widthSum += parseInt(window.getComputedStyle(imageWrap[i]).width, 10);
+			}
+
+			return widthSum;
+
+		}
+
+
+
+		rightArrow.onclick = function(event) {
+
+			if (currImage == 0) return	
+			
+			for(var i=0; i < imageWrap.length; i++){
+
+				
+				var leftInit = parseInt(imageWrap[i].style.left, 10);
+				var currWidth = parseInt(window.getComputedStyle(imageWrap[currImage-1]).width, 10);
+
+				imageWrap[i].style.left = (leftInit + currWidth) + "px";
+				
+			}			
+		
+			currImage--;
+
+				
+		}
+
 
 		leftArrow.onclick = function(event) {
 
+				if (currImage == imageWrap.length - 1) return
+				
+				
+				for(var i=0; i < imageWrap.length; i++){
+					
+					var leftInit = parseInt(imageWrap[i].style.left, 10);
+					var currWidth = parseInt(window.getComputedStyle(imageWrap[currImage]).width, 10);
 
+					console.log((leftInit - currWidth) + "px");
+					imageWrap[i].style.left = (leftInit - currWidth) + "px";
+					
+				}			
+			
+				currImage++;
 		}
-
-
 		
 
-		//img.style.left = -(left + width) + "px";
-		imagesLeft[0] = parseInt(window.getComputedStyle(images[0]).left);
-		
-		for(var i = 1; i<images.length; i++) {
-			imagesLeft[i] = imagesLeft[i-1] + parseInt(window.getComputedStyle(images[i-1]).width); 
-		}
-
-		console.dir(imagesLeft)
 		
 	})
 
