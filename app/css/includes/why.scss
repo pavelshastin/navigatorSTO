@@ -35,16 +35,19 @@
 		overflow:hidden;
 		border-radius: 10px;
 		position: relative;
-		@include flex(row, nowrap, flex-start, center);
 
-
-		img {
+		.img_wrapper {
 			position:absolute;
-			//width: 100%;
+			//width: 100%; //to center images
 			height: 100%;
 			z-index: 5;
 			transition: left 500ms;
+			overflow: hidden;
+			@include flex(row, nowrap, flex-start, center); //row, nowrap, center, center - to center images
 			
+			img {
+				height: 100%;
+			}
 
 		}
 
@@ -102,7 +105,7 @@
 	.why__img_container_buttons {
 		@include flex(row, nowrap, flex-start, center);
 
-		a {
+		.radio_button {
 			display: block;
 			background: transparent;
 			height: 8px;
@@ -110,16 +113,22 @@
 			border-radius: 50%;
 			border: 1px solid #3a4f55;
 			margin-right: 10px;
-		}
 
-		a.active {
+			&:hover {
+				cursor: pointer;
+			}
+
+			&.active {
 			border: none;
 			background-color: $yellow;
 		}
 
-		a:last-child {
-			margin-right: 0;
+			&:last-child {
+				margin-right: 0;
+			}
 		}
+
+		
 
 	}
 

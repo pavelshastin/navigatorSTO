@@ -52,13 +52,6 @@ if(Modernizr.svg) {
 
 
 
-
-
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
 	var remBase = parseInt(window.getComputedStyle(document.body).fontSize);
 	console.log("remBase: " + remBase);
@@ -71,85 +64,106 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 	imgConts.map(function(imgCont){
+		console.log(imgCont.className);
 		
-		var imageWrap = Array.prototype.slice.call(imgCont.querySelectorAll("img"), 0);
+		var imageWrap = Array.prototype.slice.call(imgCont.querySelectorAll(".img_wrapper"), 0);
 		var imagesCoord = [];
 		var leftArrow = imgCont.querySelector("div[class*='__img_arrow_left']");
 		var rightArrow = imgCont.querySelector("div[class*='__img_arrow_right']");
 		var buttonsCont = imgCont.querySelector("div[class$='__img_container_buttons']");
-		var buttons = Array.prototype.slice.call(buttonsCont.children);
+		var buttons = [];
 		var currImage = 0;
-		var screen = imgCont.querySelector("div[class$='__img_container_images'");
-		var screenWidth = parseInt(window.getComputedStyle(screen).width, 10);
+		
 
 		console.log("leftArrow: " + leftArrow.className);
 		console.log("rightArrow: " + rightArrow.className);
-		console.log("screenWidth: " + screenWidth);
+		
 
 		var sumLeft = 0;
 
+		//set the initial "left" coordinates for absolutly positioned images
 		for(var i=0; i<imageWrap.length; i++) {
 
 			imageWrap[i].style.left = sumLeft + "px";
-			console.log("left: " + imageWrap[i].style.left);
 			sumLeft += parseInt(window.getComputedStyle(imageWrap[i]).width, 10);
+
+			console.log(sumLeft);
+			button = document.createElement("div");
+			button.classList.add("radio_button");
+			if (i == 0) button.classList.add("active");
+
+			buttons[i] = button;
+			buttonsCont.appendChild(button);
 		}
 
-
-
-		function widthSum(num){
-			var widthSum = 0;
-
-			for (var i = num; i >= 0; i--) {
-				widthSum += parseInt(window.getComputedStyle(imageWrap[i]).width, 10);
-			}
-
-			return widthSum;
-
-		}
-
-
-
-		rightArrow.onclick = function(event) {
-
-			if (currImage == 0) return	
-			
-			for(var i=0; i < imageWrap.length; i++){
-
-				
-				var leftInit = parseInt(imageWrap[i].style.left, 10);
-				var currWidth = parseInt(window.getComputedStyle(imageWrap[currImage-1]).width, 10);
-
-				imageWrap[i].style.left = (leftInit + currWidth) + "px";
-				
-			}			
-		
-			currImage--;
-
-				
-		}
 
 
 		leftArrow.onclick = function(event) {
 
-				if (currImage == imageWrap.length - 1) return
+			if (currImage == 0) return	
+
+			
+			for(var i=0; i < imageWrap.length; i++){
+
+				var leftInit = parseInt(imageWrap[i].style.left, 10); 
+				var currWidth = parseInt(window.getComputedStyle(imageWrap[currImage-1]).width, 10); //currImage - 1 difference between arrowLeft and arrowRight
+
+				imageWrap[i].style.left = (leftInit + currWidth) + "px";
 				
+			}			
+
+
+			buttons[currImage-1].classList.add("active");
+			buttons[currImage].classList.remove("active")
+			
+			currImage--;
+
+		}
+
+
+		rightArrow.onclick = function(event) {
+
+				if (currImage == imageWrap.length - 1) return
 				
 				for(var i=0; i < imageWrap.length; i++){
 					
 					var leftInit = parseInt(imageWrap[i].style.left, 10);
-					var currWidth = parseInt(window.getComputedStyle(imageWrap[currImage]).width, 10);
+					var currWidth = parseInt(window.getComputedStyle(imageWrap[currImage]).width, 10);  //currImage 
 
 					console.log((leftInit - currWidth) + "px");
 					imageWrap[i].style.left = (leftInit - currWidth) + "px";
 					
 				}			
-			
+				
+
+				buttons[currImage+1].classList.add("active");
+				buttons[currImage].classList.remove("active")	
+				
 				currImage++;
 		}
 		
 
-		
+		buttons.forEach(function(button, i, buttons){
+
+			button.onclick = (function(i){
+
+				return function(event) {
+					if (i > currImage) {
+						
+						while(i > currImage) {
+							rightArrow.click();
+						}
+
+					} else if (i < currImage) {
+
+						while(i < currImage) {
+							leftArrow.click();
+						}
+					}
+				}
+			})(i);
+
+		})
 	})
 
 

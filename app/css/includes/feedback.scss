@@ -21,13 +21,13 @@
 
 }
 
-.feedback__people_container {
+.feedback__img_container {
 	width: 100%;
 	height: 210px;
 	background: transparent;
 	@include flex(column, nowrap, space-between, center);
 
-	.feedback__people_container_items {
+	.feedback__img_container_items {
 		width: 100%;
 		height: 170px;
 		background: transparent;
@@ -38,25 +38,23 @@
 		overflow: hidden;
 
 
-		.feedback__people_container_item {
+		.img_wrapper {
 			position: absolute;
 			background: $greyFormBorder;
 			width: 100%;
-			height: 100%;
-			z-index: 9;
-			left: 0;
-			top: 0;
+			//height: 100%;
+			transition: left 1500ms;
 			padding: 21px 110px 30px 110px;
 			@include flex(column, nowrap, space-between, flex-start);
 
-			.feedback__people_container_item_text {
+			.feedback__img_container_item_text {
 				font-family: "Myriad Reg";
 				font-size: 20px;
 				line-height: 1.4;
 				color: $grey;
 			}
 
-			.feedback__people_container_item_name {
+			.feedback__img_container_item_name {
 				font-family: "Myriad SemiBold";
 				font-size: 16px;
 				line-height: 16px;
@@ -65,7 +63,7 @@
 		}
 
 
-		.feedback__people_overlayer {
+		.feedback__img_overlayer {
 			position: absolute;
 			background: transparent;
 			width: 100%;
@@ -75,9 +73,9 @@
 			z-index: 10;
 			@include flex(row, nowrap, space-between, center);	
 			
-			.feedback__people_arrow_left {
+			.feedback__img_arrow_left {
 				width: 77px;
-				height: 334px;
+				height: 80%;
 				border-right: 1px solid #becada;
 				@include flex(row, nowrap, center, center);
 
@@ -94,9 +92,9 @@
 				
 			}
 
-			.feedback__people_arrow_right {
+			.feedback__img_arrow_right {
 				width: 77px;
-				height: 334px;
+				height: 80%;
 				border-left: 1px solid #becada;
 				@include flex(row, nowrap, center, center);
 
@@ -116,10 +114,10 @@
 
 	}
 
-	.feedback__people_container_buttons {
+	.feedback__img_container_buttons {
 		@include flex(row, nowrap, flex-start, center);
 
-		a {
+		.radio_button {
 			display: block;
 			background: transparent;
 			height: 8px;
@@ -127,15 +125,19 @@
 			border-radius: 50%;
 			border: 1px solid #3a4f55;
 			margin-right: 10px;
-		}
 
-		a.active {
+			&:hover {
+				cursor: pointer;
+			}
+
+			&.active {
 			border: none;
 			background-color: $yellow;
 		}
 
-		a:last-child {
-			margin-right: 0;
+			&:last-child {
+				margin-right: 0;
+			}
 		}
 
 	}
